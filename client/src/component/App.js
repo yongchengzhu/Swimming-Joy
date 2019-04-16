@@ -1,12 +1,16 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import Homepage from './Homepage';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <div>App Component</div>
-        <a href="/backend">Link to Backend</a>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path="/" component={Homepage} exact />
+        </div>
+      </BrowserRouter>
     );
   }
 }
