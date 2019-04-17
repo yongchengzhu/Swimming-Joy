@@ -94,7 +94,7 @@ class DesktopContainer extends React.Component {
                 </Menu.Item>
                 <Menu.Item as="a">Programs</Menu.Item>
                 <Menu.Item as={Link} to="/about">About</Menu.Item>
-                <Menu.Item as="a">Contact</Menu.Item>
+                <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
                 <Menu.Item position="right">
                   <Button as="a" inverted={!fixed}>
                     Log in
