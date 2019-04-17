@@ -1,10 +1,19 @@
-const express = require('express');
-const app     = express();
+const bodyParser = require('body-parser');
+const mongoose   = require('mongoose');
+const express    = require('express');
+const keys       = require('./config/keys');
+const app        = express();
+
+// Database Setup
+mongoose.set('useNewUrlParser', true);
+mongoose.connect(keys.mongoURI);
+require("./models/user");
+
+// App Setup
+app.use(bodyParser.json({ type: "*/*" }));
 
 // Routes Setup
-app.get('/backend', (req, res) => {
-  res.send('This is the backend server!');
-});
+require('./routes/authRoutes')(app);
 
 // Production Setup
 if (process.env.NODE_ENV === 'production') {
