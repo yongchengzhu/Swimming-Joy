@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container } from 'semantic-ui-react';
+import { Header, Container, Segment } from 'semantic-ui-react';
 
 import Heading from './Heading';
 import Footer from './Footer';
@@ -9,7 +9,7 @@ class Contact extends React.Component {
     return (
       <div>
         <Heading page="contact" />
-        <Container text style={{ marginTop: "4em" }}>
+        <Container text style={{ marginTop: "4em", height: "100vh" }}>
           <Header as="h1">Contact</Header>
 
           <p>Elvis Salcedo
