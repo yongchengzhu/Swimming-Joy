@@ -9,7 +9,7 @@ class Contact extends React.Component {
     return (
       <div>
         <Heading page="contact" />
-        <Container text style={{ marginTop: "4em", marginBottom: '15em' }}>
+        <Container text style={{ marginTop: "4em" }}>
           <Header as="h1">Contact</Header>
 
           <p>Elvis Salcedo
