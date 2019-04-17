@@ -11,45 +11,49 @@ import {
 import "semantic-ui-css/semantic.min.css";
 
 import Heading from './Heading';
+import Footer from './Footer';
 
 class Signin extends React.Component {
 
   render() {
     return (
       <div>
+        <Segment verticle style={{ minHeight: "100vh", margin: "0"}}>
         <Heading page="signin" />
-        <Grid textAlign="center" verticalAlign="middle">
-          <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as="h2" color="teal" textAlign="center">
-              Sign-in to your account
-            </Header>
+          <Grid textAlign="center" verticalAlign="middle">
+            <Grid.Column style={{ maxWidth: 450 }}>
+              <Header as="h2" color="teal" textAlign="center">
+                Sign-in to your account
+              </Header>
 
-            <Form size="large">
-              <Segment stacked>
-                <Form.Input
-                  fluid
-                  icon="mail"
-                  iconPosition="left"
-                  placeholder="E-mail address"
-                />
-                <Form.Input
-                  fluid
-                  icon="lock"
-                  iconPosition="left"
-                  placeholder="Password"
-                  type="password"
-                />
-                <Button color="teal" fluid size="large">
-                  Sign Up
-                </Button>
-              </Segment>
-            </Form>
+              <Form size="large">
+                <Segment stacked>
+                  <Form.Input
+                    fluid
+                    icon="mail"
+                    iconPosition="left"
+                    placeholder="E-mail address"
+                  />
+                  <Form.Input
+                    fluid
+                    icon="lock"
+                    iconPosition="left"
+                    placeholder="Password"
+                    type="password"
+                  />
+                  <Button color="teal" fluid size="large">
+                    Sign Up
+                  </Button>
+                </Segment>
+              </Form>
 
-            <Message>
-              New to us? <Link to="/signup">Sign Up</Link>
-            </Message>
-          </Grid.Column>
-        </Grid>
+              <Message>
+                New to us? <Link to="/signup">Sign Up</Link>
+              </Message>
+            </Grid.Column>
+          </Grid>
+        </Segment>
+        <Footer />
       </div>
     );
   }

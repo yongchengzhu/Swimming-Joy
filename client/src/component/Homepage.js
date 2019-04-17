@@ -13,7 +13,8 @@ import {
   Responsive,
   Segment,
   Visibility,
-  Menu
+  Menu,
+  MenuItem
 } from "semantic-ui-react";
 
 import Footer from './Footer';
@@ -78,7 +79,7 @@ class DesktopContainer extends React.Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ minHeight: /*700*/"100vh"/*, padding: "1em 0em"*/ }}
             vertical
           >
             <Menu
@@ -95,8 +96,8 @@ class DesktopContainer extends React.Component {
                 <Menu.Item as="a">Programs</Menu.Item>
                 <Menu.Item as={Link} to="/about">About</Menu.Item>
                 <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
-                <Menu.Item position="right">
-                  <Button
+                <Menu.Menu position="right">
+                  <Menu.Item
                     as={Link}
                     to="/signup"
                     inverted={!fixed}
@@ -104,11 +105,11 @@ class DesktopContainer extends React.Component {
                     style={{ marginLeft: "0.5em" }}
                   >
                     Sign Up
-                  </Button>
-                  <Button as={Link} to="/signin" inverted={!fixed}>
+                  </Menu.Item>
+                  <Menu.Item as={Link} to="/signin" inverted={!fixed}>
                     Sign in
-                  </Button>
-                </Menu.Item>
+                  </Menu.Item>
+                </Menu.Menu>
               </Container>
             </Menu>
             <HomepageHeading />
@@ -143,7 +144,7 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    <Segment style={{ height: "100vh", padding: "8em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={8}>
