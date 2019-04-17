@@ -12,26 +12,20 @@ import "semantic-ui-css/semantic.min.css";
 
 import Heading from './Heading';
 
-class Signup extends React.Component {
+class Signin extends React.Component {
 
   render() {
     return (
       <div>
-        <Heading page="signup" />
+        <Heading page="signin" />
         <Grid textAlign="center" verticalAlign="middle">
           <Grid.Column style={{ maxWidth: 450 }}>
             <Header as="h2" color="teal" textAlign="center">
-              Sign-up for an account
+              Sign-in to your account
             </Header>
 
             <Form size="large">
               <Segment stacked>
-                <Form.Input
-                  fluid
-                  icon="user"
-                  iconPosition="left"
-                  placeholder="Name"
-                />
                 <Form.Input
                   fluid
                   icon="mail"
@@ -52,7 +46,7 @@ class Signup extends React.Component {
             </Form>
 
             <Message>
-              Already have an account? <Link to="/signin">Sign In</Link>
+              New to us? <Link to="/signup">Sign Up</Link>
             </Message>
           </Grid.Column>
         </Grid>
@@ -61,4 +55,4 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+export default Signin;

@@ -17,8 +17,8 @@ class Heading extends React.Component {
           <Menu.Item as={Link} to="/contact" active={this.props.page === "contact"}>Contact</Menu.Item>
 
           <Menu.Menu position="right">
-            <Menu.Item as={Link}>Sign Up</Menu.Item>
-            <Menu.Item as={Link}>Sign In</Menu.Item>
+            <Menu.Item as={Link} to="/signup" active={this.props.page === "signup"}>Sign Up</Menu.Item>
+            <Menu.Item as={Link} to="/signin" active={this.props.page === "signin"}>Sign In</Menu.Item>
           </Menu.Menu>
         </Container>
       </Menu>
