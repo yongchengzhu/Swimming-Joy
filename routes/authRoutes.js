@@ -18,7 +18,7 @@ module.exports = app => {
     res.send('This is the backend server!');
   });
 
-  app.post('/signup', (req, res, next) => {
+  app.post('/api/signup', (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
@@ -40,12 +40,16 @@ module.exports = app => {
       user.save((err) => {
         if (err) { next(err); }
         
-        res.json({ token: tokenForUser(user) });
+        res.json({ token: tokenForUser(user), name: user.name });
       });
     });
   });
 
-  app.post('/signin', requireSignin, (req, res, next) => {
-    res.send({ token: tokenForUser(req.user) });
+  app.post('/api/signin', requireSignin, (req, res, next) => {
+    res.send({ token: tokenForUser(req.user), name: req.user.name });
   });
+
+  app.get('/api/current_user', requireAuth, (req, res) => {
+    res.send(req.user);
+  })
 }

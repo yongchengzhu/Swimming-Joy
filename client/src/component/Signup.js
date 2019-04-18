@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { reduxForm, Field } from 'redux-form';
+import { compose } from 'redux';
 import {
   Grid,
   Header,
@@ -12,13 +15,23 @@ import "semantic-ui-css/semantic.min.css";
 
 import Heading from './Heading';
 import Footer from './Footer';
+import { signup } from '../actions';
 
 class Signup extends React.Component {
+  onSubmit = (formProps) => {
+    this.props.signup(formProps, () => this.props.history.push('/'));
+  }
+
+  renderError(err) {
+    if (err) {
+      return <Message negative>{this.props.auth.error}</Message>;
+    }
+  }
 
   render() {
     return (
       <div>
-        <Segment verticle style={{ minHeight: "100vh", margin: "0"}}>
+        <Segment style={{ minHeight: "100vh", margin: "0"}}>
           <Heading page="signup" />
           <Grid textAlign="center" verticalAlign="middle">
             <Grid.Column style={{ maxWidth: 450 }}>
@@ -26,27 +39,39 @@ class Signup extends React.Component {
                 Sign-up for an account
               </Header>
 
-              <Form size="large">
+              <Form size="large" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Segment stacked>
-                  <Form.Input
-                    fluid
-                    icon="user"
-                    iconPosition="left"
-                    placeholder="Name"
-                  />
-                  <Form.Input
-                    fluid
-                    icon="mail"
-                    iconPosition="left"
-                    placeholder="E-mail address"
-                  />
-                  <Form.Input
-                    fluid
-                    icon="lock"
-                    iconPosition="left"
-                    placeholder="Password"
-                    type="password"
-                  />
+                  <Form.Field>
+                    <Field
+                      name="name"
+                      type="text"
+                      component="input"
+                      autoComplete="off"
+                      placeholder="Name"
+                      required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Field
+                      name="email"
+                      type="email"
+                      component="input"
+                      autoComplete="off"
+                      placeholder="E-mail address"
+                      required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Field
+                      name="password"
+                      type="password"
+                      component="input"
+                      autoComplete="off"
+                      placeholder="Password"
+                      required
+                    />
+                  </Form.Field>
+                  {this.renderError(this.props.auth.error)}
                   <Button color="teal" fluid size="large">
                     Sign Up
                   </Button>
@@ -65,4 +90,11 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+function mapStateToProps (state) {
+  return { auth: state.auth }
+}
+
+export default compose(
+  connect(mapStateToProps, { signup }),
+  reduxForm({ form: 'signup' })
+)(Signup);

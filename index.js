@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const mongoose   = require('mongoose');
 const express    = require('express');
 const keys       = require('./config/keys');
+const cors       = require('cors');
 const app        = express();
 
 // Database Setup
@@ -11,6 +12,7 @@ require("./models/user");
 
 // App Setup
 app.use(bodyParser.json({ type: "*/*" }));
+app.use(cors());
 
 // Routes Setup
 require('./routes/authRoutes')(app);

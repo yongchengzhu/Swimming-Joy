@@ -10,7 +10,7 @@ class About extends React.Component {
       <div>
         <Segment verticle style={{ minHeight: "100vh", margin: "0" }}>
           <Heading page="about" />
-          <Container text style={{ marginTop: "4em", padding: "1em 0em", marginBottom: '4em' }}>
+          <Container text style={{ marginTop: "4em", marginBottom: '4em' }}>
             <Header as="h1">About</Header>
 
             <p><strong>Joy Swimming Inc</strong> is a standard and well-equipped chlorinated 25 yards indoor swimming pool located in the heart of the rockaway’s towns. Our main goal on setting this business is with the aim to engage and encourage parents and as well kids to participate in sport activity since one’s promotes health, can help keep a healthy lifestyle, self-therapy, stress reliver, , fitness, fun, socialization and most of all learn a life saving skill that one day could save their own life or some else’s life. As well teach adults and kids how to defend and handle difficult situations in deep waters by providing the necessaries skills from fundamentals to high-level techniques.</p>

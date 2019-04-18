@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { reduxForm, Field } from 'redux-form';
 import {
   Grid,
   Header,
@@ -12,13 +15,17 @@ import "semantic-ui-css/semantic.min.css";
 
 import Heading from './Heading';
 import Footer from './Footer';
+import { signin } from '../actions';
 
 class Signin extends React.Component {
+  onSubmit = (formProps) => {
+    this.props.signin(formProps, () => this.props.history.push('/'));
+  }
 
   render() {
     return (
       <div>
-        <Segment verticle style={{ minHeight: "100vh", margin: "0"}}>
+        <Segment style={{ minHeight: "100vh", margin: "0"}}>
         <Heading page="signin" />
           <Grid textAlign="center" verticalAlign="middle">
             <Grid.Column style={{ maxWidth: 450 }}>
@@ -26,21 +33,28 @@ class Signin extends React.Component {
                 Sign-in to your account
               </Header>
 
-              <Form size="large">
+              <Form size="large" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Segment stacked>
-                  <Form.Input
-                    fluid
-                    icon="mail"
-                    iconPosition="left"
-                    placeholder="E-mail address"
-                  />
-                  <Form.Input
-                    fluid
-                    icon="lock"
-                    iconPosition="left"
-                    placeholder="Password"
-                    type="password"
-                  />
+                  <Form.Field>
+                    <Field
+                      name="email"
+                      type="email"
+                      component="input"
+                      autoComplete="off"
+                      placeholder="E-mail address"
+                      required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Field
+                      name="password"
+                      type="password"
+                      component="input"
+                      autoComplete="off"
+                      placeholder="Password"
+                      required
+                    />
+                  </Form.Field>
                   <Button color="teal" fluid size="large">
                     Sign Up
                   </Button>
@@ -59,4 +73,7 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin;
+export default compose(
+  reduxForm({ form: 'signin' }),
+  connect(null, { signin })
+)(Signin);

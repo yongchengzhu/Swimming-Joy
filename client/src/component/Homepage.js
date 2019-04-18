@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import "semantic-ui-css/semantic.min.css";
 import {
@@ -9,15 +10,14 @@ import {
   Header,
   Icon,
   Image,
-  List,
   Responsive,
   Segment,
   Visibility,
-  Menu,
-  MenuItem
+  Menu
 } from "semantic-ui-react";
 
 import Footer from './Footer';
+import { fetchUser } from '../actions';
 
 // 
 // Homepage Heading
@@ -65,6 +65,48 @@ class DesktopContainer extends React.Component {
   hideFixedMenu = () => this.setState({ fixed: false });
   showFixedMenu = () => this.setState({ fixed: true });
 
+  componentDidMount() {
+    this.props.fetchUser();
+  }
+
+  renderLinks() {
+    if (this.props.auth.authenticated) {
+      return (
+        <React.Fragment>
+          <Menu.Item>
+            {this.props.auth.name}
+          </Menu.Item>
+          <Menu.Item
+            as={Link}
+            to="/signout"
+            inverted={!this.state.fixed}
+          >
+            Sign Out
+          </Menu.Item>
+        </React.Fragment>
+      );
+    } else {
+      return (
+        <React.Fragment>
+          <Menu.Item
+            as={Link}
+            to="/signup"
+            inverted={!this.state.fixed}
+            style={{ marginLeft: "0.5em" }}
+          >
+            Sign Up
+          </Menu.Item>
+          <Menu.Item
+            as={Link} to="/signin"
+            inverted={!this.state.fixed}
+          >
+            Sign In
+          </Menu.Item>
+        </React.Fragment>
+      );
+    }
+  }
+
   render() {
     const { children } = this.props;
     const { fixed } = this.state;
@@ -93,22 +135,22 @@ class DesktopContainer extends React.Component {
                 <Menu.Item as="a" active>
                   Home
                 </Menu.Item>
-                <Menu.Item as="a">Programs</Menu.Item>
+                <Menu.Item as={Link} to="/programs">Programs</Menu.Item>
                 <Menu.Item as={Link} to="/about">About</Menu.Item>
                 <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
                 <Menu.Menu position="right">
-                  <Menu.Item
+                  {this.renderLinks()}
+                  {/* <Menu.Item
                     as={Link}
                     to="/signup"
                     inverted={!fixed}
-                    primary={fixed}
                     style={{ marginLeft: "0.5em" }}
                   >
                     Sign Up
                   </Menu.Item>
                   <Menu.Item as={Link} to="/signin" inverted={!fixed}>
                     Sign in
-                  </Menu.Item>
+                  </Menu.Item> */}
                 </Menu.Menu>
               </Container>
             </Menu>
@@ -129,9 +171,9 @@ DesktopContainer.propTypes = {
 // 
 // Responsive Container
 // 
-const ResponsiveContainer = ({ children }) => (
+const ResponsiveContainer = ({ children, auth, fetchUser }) => (
   <div>
-    <DesktopContainer>{children}</DesktopContainer>
+    <DesktopContainer auth={auth} fetchUser={fetchUser}>{children}</DesktopContainer>
   </div>
 );
 
@@ -142,8 +184,8 @@ ResponsiveContainer.propTypes = {
 // 
 // Homepage Component
 // 
-const Homepage = () => (
-  <ResponsiveContainer>
+const Homepage = (props) => (
+  <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
     <Segment style={{ height: "100vh", padding: "8em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
@@ -204,5 +246,8 @@ const Homepage = () => (
   </ResponsiveContainer>
 );
 
+function mapStateToProps(state) {
+  return { auth: state.auth }
+}
 
-export default Homepage;
+export default connect(mapStateToProps, { fetchUser })(Homepage);
