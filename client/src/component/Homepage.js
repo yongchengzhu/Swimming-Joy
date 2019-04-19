@@ -15,6 +15,7 @@ import {
   Visibility,
   Menu
 } from "semantic-ui-react";
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 import Test from './Test';
 import Footer from './Footer';
@@ -177,7 +178,33 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    <Segment secondary style={{ height: "100vh", padding: "2em 5em", opacity: "0.9"}} vertical>
+    <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" />
+    <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "0" }} src="https://www.solidbackgrounds.com/images/950x350/950x350-white-solid-color-background.jpg" />
+    <div class="container-fluid" style={{ textAlign: "center", zIndex: "1" }}>
+      <div className="row align-items-center" style={{ height: "100vh" }}>
+        <div className="col">
+          <Header as="h1" style={{ marginBottom: "1em", fontSize: "3em" }}>HOW IT WORKS</Header>
+          <div class="row align-items-start justify-content-around">
+            <div class="col-3" style={{ textAlign: "center"}}>
+              <i class="fab fa-think-peaks" style={{ fontSize: "10em"}}></i>
+              <Header as="h3">CHOOSE PLAN</Header>
+              <p>Get your personalized swim workout</p>
+            </div>
+            <div class="col-3" style={{ textAlign: "center"}}>
+            <i class="fas fa-swimmer" style={{ fontSize: "10em"}}></i>
+              <Header as="h3">START WORKOUT</Header>
+              <p>Follow your structured swim program to improve your techniques</p>
+            </div>
+            <div class="col-3" style={{ textAlign: "center"}}>
+              <i class="fas fa-tasks" style={{ fontSize: "10em"}}></i>
+              <Header as="h3">TRACK PROGRESS</Header>
+              <p>Measure progress toward your goals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* <Segment secondary style={{ height: "100vh", padding: "2em 5em", opacity: "0.9"}} vertical>
       <Grid columns={3} style={{ marginLeft: "7em" }}>
         <Grid.Row>
           <Grid.Column>
@@ -224,62 +251,6 @@ const Homepage = (props) => (
           <Grid.Column>
             <Header style={{ marginLeft: "5em" }}>SWIM</Header>
             <Image src='https://www.wcu.edu/WebGraphicsNew/CampSwimming.jpg' rounded style={{ width: "230px" }} />
-          </Grid.Column>
-        </Grid.Row>
-
-      </Grid>
-      
-      {/* <Grid container stackable verticalAlign="middle">
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              Anyone Are Welcomed
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              By 'anyone', we MEAN anyone. Our program is open to all ages, from infant to elderly. We DO NOT discriminate against any race! Even if you're a cat, an ape, a bonobo, or an attack helicoptor, we sincerely invite you to join our wonderful program today.
-            </p>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              We've Trained the Chubbiest Bananas to Swim
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              Oh yes, you're goddamn right. Even bananas can swim if they participate in our swimming program. Join us, or if not, you may as well go eat a banana.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated="right" width={6}>
-            <Image
-              bordered
-              rounded
-              size="large"
-              src="http://cdn.shopify.com/s/files/1/2040/0303/products/Happy_Cute_Kawaii_Fruit_Cartoon_Emoji_-_Banana_697268224_grande.jpg?v=1501028486"
-            />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign="center">
-            <Button size="huge">Check Them Out</Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid> */}
-    </Segment>
-
-    {/* <Segment style={{ padding: "0em" }} vertical>
-      <Grid celled="internally" columns="equal" stackable>
-        <Grid.Row textAlign="center">
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "Wow..."
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              Is what they all can say about us.
-            </p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "Choosing Swimming Joy was the most correct decision of my life. They trained me well to swim all the way from my home country to the United States. God bless Swimming Joy!"
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              <b>Juan</b> Legal Citizen
-            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
