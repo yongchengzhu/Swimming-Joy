@@ -8,7 +8,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div>
-        <Segment verticle style={{ minHeight: "100vh", margin: "0"}}>
+        <Segment verticle style={{ height: "100vh", margin: "0"}}>
           <Heading page="contact" />
           <Container text style={{ marginTop: "4em"}}>
             <Header as="h1">Contact</Header>

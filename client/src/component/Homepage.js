@@ -16,6 +16,7 @@ import {
   Menu
 } from "semantic-ui-react";
 
+import Test from './Test';
 import Footer from './Footer';
 import { fetchUser } from '../actions';
 
@@ -115,13 +116,14 @@ class DesktopContainer extends React.Component {
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
           once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
+          // onBottomPassed={this.showFixedMenu}
+          // onBottomPassedReverse={this.hideFixedMenu}
         >
+          <Test />
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: /*700*/"100vh"/*, padding: "1em 0em"*/ }}
+            style={{ height: "100vh", opacity: "0.8", position: "absolute", top: "0", left: "0", width: "100%" }}
             vertical
           >
             <Menu
@@ -140,17 +142,6 @@ class DesktopContainer extends React.Component {
                 <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
                 <Menu.Menu position="right">
                   {this.renderLinks()}
-                  {/* <Menu.Item
-                    as={Link}
-                    to="/signup"
-                    inverted={!fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    Sign Up
-                  </Menu.Item>
-                  <Menu.Item as={Link} to="/signin" inverted={!fixed}>
-                    Sign in
-                  </Menu.Item> */}
                 </Menu.Menu>
               </Container>
             </Menu>
@@ -186,8 +177,59 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    <Segment style={{ height: "100vh", padding: "8em 0em" }} vertical>
-      <Grid container stackable verticalAlign="middle">
+    <Segment secondary style={{ height: "100vh", padding: "2em 5em", opacity: "0.9"}} vertical>
+      <Grid columns={3} style={{ marginLeft: "7em" }}>
+        <Grid.Row>
+          <Grid.Column>
+            <Segment circular inverted tertiary color="red" style={{ width: 200, height: 200 }}>
+              <Header as="h2">
+                Hardwork
+                <Header.Subheader></Header.Subheader>
+              </Header>
+            </Segment>
+          </Grid.Column>
+          <Grid.Column>
+            <Segment circular inverted tertiary color="teal" style={{ width: 200, height: 200 }}>
+              <Header as="h2">
+                Dedication
+                <Header.Subheader></Header.Subheader>
+              </Header>
+            </Segment>
+          </Grid.Column>
+          <Grid.Column>
+            <Segment circular inverted tertiary color="pink" style={{ width: 200, height: 200 }}>
+              <Header as="h2">
+                Perserverance
+                <Header.Subheader></Header.Subheader>
+              </Header>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={1} centered>
+          <Grid.Column>
+            <Segment inverted textAlign="center" style={{ marginTop: "2em", marginRight: "8em" }}>
+              <Header as="h1">What are you waiting for? Join Us Today!</Header>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row style={{ marginTop: "3em" }}>
+          <Grid.Column>
+            <Header style={{ marginLeft: "5em" }}>LEARN</Header>
+            <Image src='https://www.fastweb.com/uploads/article_photo/photo/2161/crop380w_istock_000002193842xsmall-books.jpg' rounded style={{ width: "230px" }} />
+          </Grid.Column>
+          <Grid.Column>
+            <Header style={{ marginLeft: "5em" }}>ENJOY</Header>
+            <Image src='http://abouttambor.com/wp-content/uploads/2012/07/enjoy-life-in-costa-rica.jpg' rounded style={{ width: "230px" }} />
+          </Grid.Column>
+          <Grid.Column>
+            <Header style={{ marginLeft: "5em" }}>SWIM</Header>
+            <Image src='https://www.wcu.edu/WebGraphicsNew/CampSwimming.jpg' rounded style={{ width: "230px" }} />
+          </Grid.Column>
+        </Grid.Row>
+
+      </Grid>
+      
+      {/* <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
@@ -217,10 +259,10 @@ const Homepage = (props) => (
             <Button size="huge">Check Them Out</Button>
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> */}
     </Segment>
 
-    <Segment style={{ padding: "0em" }} vertical>
+    {/* <Segment style={{ padding: "0em" }} vertical>
       <Grid celled="internally" columns="equal" stackable>
         <Grid.Row textAlign="center">
           <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
@@ -241,7 +283,7 @@ const Homepage = (props) => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
     <Footer />
   </ResponsiveContainer>
 );

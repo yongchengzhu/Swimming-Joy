@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Signup from './Signup';
 import Signin from './Signin';
 import Signout from './Signout';
+import Test from './Test';
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Route path="/signup" component={Signup} exact />
           <Route path="/signin" component={Signin} exact />
           <Route path="/signout" component={Signout} exact />
+          <Route path="/test" component={Test} exact />
         </div>
       </BrowserRouter>
     );
