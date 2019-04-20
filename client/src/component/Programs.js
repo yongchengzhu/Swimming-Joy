@@ -4,7 +4,8 @@ import {
   Container,
   Header,
   Button,
-  Grid
+  Grid,
+  Label
 } from 'semantic-ui-react';
 
 import Heading from './Heading';
@@ -18,86 +19,167 @@ class Programs extends React.Component {
       <div>
         <Segment style={{ minHeight: "100vh", margin: "0" }}>
           <Heading page="program" />
-          <Container text style={{ marginTop: "4em"}}>
-          <Header as="h1">Programs</Header>
-          <Grid columns={4}>
-            <Grid.Row>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Red Cross Lifeguard Training
-                    <div style={{ fontSize: "30px", marginTop: "30px" }}>$250</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER TRAINING</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Adults Swim Program
-                    <div style={{ fontSize: "30px", marginTop: "30px" }}>$175</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER 8 LESSONS</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Teens Swim Program
-                    <div style={{ fontSize: "30px", marginTop: "50px" }}>$170</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER 8 LESSONS</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Kids Swim Program
-                    <div style={{ fontSize: "30px", marginTop: "50px" }}>$165</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER 8 LESSONS</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-            
-            <Grid.Row>
-            <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Mother & Baby Classes
-                    <div style={{ fontSize: "30px", marginTop: "30px" }}>$190</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER 8 LESSONS</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Boys' & Girls' Night
-                    <div style={{ fontSize: "30px", marginTop: "50px" }}>$175</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER 100 DAYS</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Segment style={square} textAlign='center'>
-                  <Header as="h4">
-                    Adults Membership
-                    <div style={{ fontSize: "30px", marginTop: "50px" }}>$25</div>
-                    <div style={{ color: "grey", marginTop: "10px", marginBottom: "20px" }}>PER YEAR</div>
-                    <Button secondary>Select</Button>
-                  </Header>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-          </Container>
+          <div className="container">
+            <div className="row align-items-center" style={{ minHeight: "100vh" }}>
+              <div className="col" style={{ textAlign: "center" }}>
+                {/* First row */}
+                <div className="row justify-content-center" style={{ margin: "1em 0em", height: "35em" }}>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                      <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                        <i className="fas fa-life-ring" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                        <div className="col">
+                          <div style={{ textAlign: "left" }}>
+                            <Header as="h2" style={{ textAlign: "center" }}>Lifeguard Training</Header>
+                            <div style={{ position: "absolute" }}>
+                              <p>Effective trainings and guidances from our professional trainers.</p>
+                              <ul>
+                                <li>40 Hours of Training</li>
+                                <li>CPR Course</li>
+                                <li>Swimming & Written Exams</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                              <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                        </div>
+                      </div>
+                  </div>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-swimmer" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Adults Program</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Trainee must be over the age of 18. Learn to swim in less than a month.</p>
+                            <ul>
+                              <li>8 Lessons</li>
+                              <li>Basic Level Swimming</li>
+                              <li>Safety Skills</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-running" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Teens Program</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Trainee must be 10-17 years old. Learn basic swimming techniques.</p>
+                            <ul>
+                              <li>8 Lessons</li>
+                              <li>Swim Without Assistance</li>
+                              <li>Athletic Trainings</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Second Row */}
+                <div className="row justify-content-center" style={{ margin: "1em 0em", height: "35em" }}>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-child" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Kids Program</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Trainee must be 6-9 years old. Learn basic aquatic skills.</p>
+                            <ul>
+                              <li>8 Lessons</li>
+                              <li>Swim Assistance</li>
+                              <li>Breath Control</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-baby" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Mom & Baby Class</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Introductory swimming course for toddlers and parents.</p>
+                            <ul>
+                              <li>8 Lessons</li>
+                              <li>Parents / Guardians required</li>
+                              <li>Get toddler familiar with water</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-glass-cheers" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Boys' & Girls' Night</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Reserve our spacious campus for the night.</p>
+                            <ul>
+                              <li>Maximum 50 people</li>
+                              <li>No age restrictions</li>
+                              <li>Time to Party!</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Third Row */}
+                <div className="row justify-content-center" style={{ margin: "1em 0em", height: "35em" }}>
+                  <div className="col-3" style={{ border: "1px solid lightgrey", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-center" style={{ height: "100%", padding: "0 1em" }}>
+                      <i className="fas fa-swimming-pool" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
+                      <div className="col">
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center" }}>Adults Membership</Header>
+                          <div style={{ position: "absolute" }}>
+                            <p>Keep up with your swimming everyday.</p>
+                            <ul>
+                              <li>Unlimited Facility Access</li>
+                              <li>Personal Trainer</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
+                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </Segment>
         <Footer />
       </div>

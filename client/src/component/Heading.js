@@ -54,7 +54,7 @@ class Heading extends React.Component {
 
   render() {
     return (
-      <Menu secondary pointing size="large">
+      <Menu secondary pointing size="large" stackable>
         <Container>
           <Menu.Item as={Link} to="/">Home</Menu.Item>
           <Menu.Item as={Link} to="/programs" active={this.props.page === "program"}>Programs</Menu.Item>

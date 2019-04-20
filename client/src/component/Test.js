@@ -7,7 +7,7 @@ class DemoCarousel extends Component {
     render() {
         return (
             <div>
-              <Carousel style={{ height: "100vh" }}>
+              <Carousel style={{ height: "100vh", position: "absolute", width: "100%" }}>
                 <Carousel.Item style={{ height: "100vh" }}>
                   <img
                     className="d-block w-100"

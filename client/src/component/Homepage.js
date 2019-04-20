@@ -28,7 +28,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as="h1"
-      content="Swimming Joy"
+      content="Joy Swimming"
       inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
@@ -114,7 +114,7 @@ class DesktopContainer extends React.Component {
     const { fixed } = this.state;
 
     return (
-      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+      <Responsive /*minWidth={Responsive.onlyTablet.minWidth}*/>
         <Visibility
           once={false}
           // onBottomPassed={this.showFixedMenu}
@@ -124,7 +124,7 @@ class DesktopContainer extends React.Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ height: "100vh", opacity: "0.8", position: "absolute", top: "0", left: "0", width: "100%" }}
+            style={{ height: "100vh", /*opacity: "0.8",*/ backgroundColor: "rgba(0,0,0,0.2)"/*, position: "absolute", top: "0", left: "0", width: "100%"*/ }}
             vertical
           >
             <Menu
@@ -133,6 +133,8 @@ class DesktopContainer extends React.Component {
               pointing={!fixed}
               secondary={!fixed}
               size="large"
+              stackable
+              style={{ border: "none" }}
             >
               <Container>
                 <Menu.Item as="a" active>
@@ -178,7 +180,7 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" />
+    {/* <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" /> */}
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "0" }} src="https://www.solidbackgrounds.com/images/950x350/950x350-white-solid-color-background.jpg" />
     <div class="container-fluid" style={{ textAlign: "center", zIndex: "1" }}>
       <div className="row align-items-center" style={{ height: "100vh" }}>
