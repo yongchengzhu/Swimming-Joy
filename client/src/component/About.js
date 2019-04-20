@@ -10,7 +10,57 @@ class About extends React.Component {
       <div>
         <Segment verticle style={{ minHeight: "100vh", margin: "0" }}>
           <Heading page="about" />
-          <Container text style={{ marginTop: "4em", marginBottom: '4em' }}>
+          <div className="container" style={{ padding: "0 15em" }}>
+            <div className="row">
+              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
+                <p style={{ fontSize: "3em", fontWeight: "100" }}>About Us</p>
+                <p style={{ fontWeight: "100", fontSize: "18px" }}>Joy Swimming Inc is a standard and well-equipped chlorinated 25 yards 
+                  indoor swimming pool located in the heart of the rockaway’s towns. Our main 
+                  goal on setting this business is with the aim to engage and encourage parents 
+                  and as well kids to participate in sport activity since one’s promotes health, 
+                  can help keep a healthy lifestyle, self-therapy, stress reliver, , fitness, fun, 
+                  socialization and most of all learn a life saving skill that one day could save 
+                  their own life or some else’s life. As well teach adults and kids how to defend 
+                  and handle difficult situations in deep waters by providing the necessaries skills 
+                  from fundamentals to high-level techniques.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="container-fluid" style={{ backgroundColor: "seashell"/*, position: "absolute"*/, left: "0" }}>
+            <div className="row align-items-center" style={{ height: "40vh" }}>
+              <div className="col" style={{ padding: "0 15em" }}>
+                <p style={{ fontSize: "20px", fontWeight: "600" }}>OUR MISSION:</p>
+                <p style={{ fontSize: "30px", fontWeight: "600" }}>Providing Healthy And Effective Trainings For All Swimmers</p>
+                <p>
+                  JSI's mission is to provide a sport facility that enhances the health, fitness, 
+                  safety, recreation and quality of life for all in Joy Swimming Inc. An indoor 
+                  pool facility which will include multiple swimming activities such as competition, 
+                  water challenges and other related activities and engage commuters in sporting 
+                  activities, health and fitness and to fight against obesity and unhealthy lifestyle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="container" style={{ padding: "0 15em" }}>
+            <div className="row">
+              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
+                <p style={{ fontSize: "3em", fontWeight: "100" }}>Open Hours</p>
+                <p style={{ fontWeight: "100", fontSize: "18px" }}>
+                  Joy Swimming Inc will be opened Monday - Thursday from 8AM - 6PM weekends 
+                  (Fridays to Sundays) and from 7:00 am to 6:00 pm to offer the most flexibles 
+                  schedule and for us to be able to accommodate customer with different time 
+                  preference also to recruit enough staff to run shift among our workforce. We will 
+                  go out of our way to acquire standard equipment and other customers’ needs or 
+                  requests to keep them happy and be able to provide a healthier environment.  
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* <Container text style={{ marginTop: "4em", marginBottom: '4em' }}>
             <Header as="h1">About</Header>
 
             <p><strong>Joy Swimming Inc</strong> is a standard and well-equipped chlorinated 25 yards indoor swimming pool located in the heart of the rockaway’s towns. Our main goal on setting this business is with the aim to engage and encourage parents and as well kids to participate in sport activity since one’s promotes health, can help keep a healthy lifestyle, self-therapy, stress reliver, , fitness, fun, socialization and most of all learn a life saving skill that one day could save their own life or some else’s life. As well teach adults and kids how to defend and handle difficult situations in deep waters by providing the necessaries skills from fundamentals to high-level techniques.</p>
@@ -18,7 +68,7 @@ class About extends React.Component {
           
             <p><strong>Joy Swimming Inc</strong> will be opened Monday-Thursday from 8AM-6PM weekends (Fridays to Sundays) and from 7:00 am to 6:00 pm to offer the most flexibles schedule and for us to be able to accommodate customer with different time preference also to recruit enough staff to run shift among our workforce. We will go out of our way to acquire standard equipment and other customers’ needs or requests to keep them happy and be able to provide a healthier environment.</p>
             <p><strong>Joy Swimming Inc</strong> will be a family owned business, the business will be managed by Elvis Salcedo & Nikki Kwok, with a well over 8 years of experienced swimming instructors and 7 years in pool management in the United States.</p>
-          </Container>
+          </Container> */}
         </Segment>
         <Footer />
       </div>

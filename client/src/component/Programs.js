@@ -19,7 +19,13 @@ class Programs extends React.Component {
       <div>
         <Segment style={{ minHeight: "100vh", margin: "0" }}>
           <Heading page="program" />
-          <div className="container">
+          <div className="container" style={{ fontWeight: "100" }}>
+            <div className="row" >
+              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
+                <p style={{ fontSize: "3em", fontWeight: "100" }}>Something for Everyone</p>
+                <p style={{ fontWeight: "100" }}>Whether you want to train to become an athlete, a lifeguard, or just to workout, we have you covered. </p>
+              </div>
+            </div>
             <div className="row align-items-center" style={{ minHeight: "100vh" }}>
               <div className="col" style={{ textAlign: "center" }}>
                 {/* First row */}
@@ -29,7 +35,7 @@ class Programs extends React.Component {
                         <i className="fas fa-life-ring" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                         <div className="col">
                           <div style={{ textAlign: "left" }}>
-                            <Header as="h2" style={{ textAlign: "center" }}>Lifeguard Training</Header>
+                            <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Lifeguard Training</Header>
                             <div style={{ position: "absolute" }}>
                               <p>Effective trainings and guidances from our professional trainers.</p>
                               <ul>
@@ -40,8 +46,9 @@ class Programs extends React.Component {
                             </div>
                           </div>
                         </div>
-                        <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                              <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                        <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0", textAlign: "center" }}>
+                              <Header as="h3" style={{ fontWeight: "100" }}>$250.00</Header>
+                              <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                         </div>
                       </div>
                   </div>
@@ -50,7 +57,7 @@ class Programs extends React.Component {
                       <i className="fas fa-swimmer" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Adults Program</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Adults Program</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Trainee must be over the age of 18. Learn to swim in less than a month.</p>
                             <ul>
@@ -62,7 +69,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$175.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -71,7 +79,7 @@ class Programs extends React.Component {
                       <i className="fas fa-running" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Teens Program</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Teens Program</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Trainee must be 10-17 years old. Learn basic swimming techniques.</p>
                             <ul>
@@ -83,7 +91,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$170.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -95,7 +104,7 @@ class Programs extends React.Component {
                       <i className="fas fa-child" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Kids Program</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Kids Program</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Trainee must be 6-9 years old. Learn basic aquatic skills.</p>
                             <ul>
@@ -107,7 +116,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$165.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -116,7 +126,7 @@ class Programs extends React.Component {
                       <i className="fas fa-baby" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Mom & Baby Class</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Mom & Baby Class</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Introductory swimming course for toddlers and parents.</p>
                             <ul>
@@ -128,7 +138,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$190.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -137,7 +148,7 @@ class Programs extends React.Component {
                       <i className="fas fa-glass-cheers" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Boys' & Girls' Night</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Boys' & Girls' Night</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Reserve our spacious campus for the night.</p>
                             <ul>
@@ -149,7 +160,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$100.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -161,7 +173,7 @@ class Programs extends React.Component {
                       <i className="fas fa-swimming-pool" style={{ fontSize: "9em", position: "absolute", top: "50px", left: "0", right: "0" }} />
                       <div className="col">
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center" }}>Adults Membership</Header>
+                          <Header as="h2" style={{ textAlign: "center", fontWeight: "100" }}>Adults Membership</Header>
                           <div style={{ position: "absolute" }}>
                             <p>Keep up with your swimming everyday.</p>
                             <ul>
@@ -172,7 +184,8 @@ class Programs extends React.Component {
                         </div>
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
-                            <Button style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Header as="h3" style={{ fontWeight: "100" }}>$25.00</Header>
+                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>

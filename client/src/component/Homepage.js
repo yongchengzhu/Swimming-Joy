@@ -20,6 +20,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Test from './Test';
 import Footer from './Footer';
 import { fetchUser } from '../actions';
+import './Homepage.css';
 
 // 
 // Homepage Heading
@@ -180,7 +181,45 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    {/* <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" /> */}
+    {/* <div className="container-fluid">
+      <div className="row align-items-center" style={{ height: "30vh" }}>
+        <div className="col">
+          <div className="row" style={{ textAlign: "center" }}>
+            <div className="col">
+              <div class="ui large statistic">
+                <div class="value">
+                  0
+                </div>
+                <div class="label">
+                  Views
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="ui large statistic">
+                <div class="value">
+                  0
+                </div>
+                <div class="label">
+                  Members
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="ui large statistic">
+                <div class="value">
+                  0
+                </div>
+                <div class="label">
+                  Purchases
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> */}
+    <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" />
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "0" }} src="https://www.solidbackgrounds.com/images/950x350/950x350-white-solid-color-background.jpg" />
     <div class="container-fluid" style={{ textAlign: "center", zIndex: "1" }}>
       <div className="row align-items-center" style={{ height: "100vh" }}>
