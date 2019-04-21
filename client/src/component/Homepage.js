@@ -26,9 +26,9 @@ import './Homepage.css';
 // Homepage Heading
 // 
 const HomepageHeading = ({ mobile }) => (
-  // <Container text>
-  <div className="row align-items-center" style={{ width:"100%", height: "100vh", position: "absolute", top: "0", left: "0" }}>
-    <div className="col">
+  <Container text style={{ position: "absolute", /*top: "25%", left: "25%"*/ left: "0", right: "0", marginLeft: "auto", marginRight: "auto" }}>
+   {/* <div className="row align-items-center" style={{ width:"100%", height: "100vh", position: "absolute", top: "0", left: "0" }}> */}
+    {/* <div className="col"> */}
     <Header
       as="h1"
       content="Joy Swimming"
@@ -57,9 +57,9 @@ const HomepageHeading = ({ mobile }) => (
       Get Started
       <Icon name="right arrow" />
     </Button>
-    </div>
-  </div>
-  // </Container>
+     {/* </div> */}
+   {/* </div> */}
+  </Container>
 );
 
 HomepageHeading.propTypes = {
