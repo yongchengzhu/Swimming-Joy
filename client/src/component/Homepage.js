@@ -27,7 +27,7 @@ import './Homepage.css';
 // 
 const HomepageHeading = ({ mobile }) => (
   // <Container text>
-  <div className="row align-items-center">
+  <div className="row align-items-center" style={{ width:"100%", height: "100vh", position: "absolute", top: "0", left: "0" }}>
     <div className="col">
     <Header
       as="h1"
