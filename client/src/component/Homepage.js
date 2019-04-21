@@ -21,12 +21,12 @@ import Test from './Test';
 import Footer from './Footer';
 import { fetchUser } from '../actions';
 import './Homepage.css';
-
 // 
 // Homepage Heading
 // 
 const HomepageHeading = ({ mobile }) => (
-  <Container text style={{ position: "absolute", /*top: "25%", left: "25%"*/ left: "0", right: "0", marginLeft: "auto", marginRight: "auto" }}>
+  
+  <Container text style={{ position: "absolute", left: "0", right: "0", marginLeft: "auto", marginRight: "auto", top: "50%", marginTop: "-176.5px" }}>
    {/* <div className="row align-items-center" style={{ width:"100%", height: "100vh", position: "absolute", top: "0", left: "0" }}> */}
     {/* <div className="col"> */}
     <Header
