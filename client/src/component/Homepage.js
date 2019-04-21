@@ -27,7 +27,6 @@ import './Homepage.css';
 // 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-    <img src="logo.png" style={{ width: "150px" }}></img>
     <Header
       as="h1"
       content="Joy Swimming"
@@ -37,10 +36,10 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: "normal",
         marginBottom: 0,
         marginTop: mobile ? "1.5em" : "2em",
-        display: "inline-block",
-        marginRight: "1em"
+        display: "inline-block"
       }}
     />
+    <img src="https://i.imgur.com/vb0Zv9V.png" style={{ width: "125px", position: "absolute", bottom: "50%"  }}></img>
     <Header
       as="h2"
       content="Your only opportunity to swim the duck out of your life."
