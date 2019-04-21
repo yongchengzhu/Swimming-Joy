@@ -26,7 +26,9 @@ import './Homepage.css';
 // Homepage Heading
 // 
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  // <Container text>
+  <div className="row align-items-center">
+    <div className="col">
     <Header
       as="h1"
       content="Joy Swimming"
@@ -55,7 +57,9 @@ const HomepageHeading = ({ mobile }) => (
       Get Started
       <Icon name="right arrow" />
     </Button>
-  </Container>
+    </div>
+  </div>
+  // </Container>
 );
 
 HomepageHeading.propTypes = {
