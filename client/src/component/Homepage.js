@@ -36,10 +36,11 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: "normal",
         marginBottom: 0,
         marginTop: mobile ? "1.5em" : "2em",
-        display: "inline-block"
+        display: "inline-block",
+        verticalAlign: "bottom"
       }}
     />
-    <img src="https://i.imgur.com/vb0Zv9V.png" style={{ width: "125px", position: "absolute", bottom: "50%"  }}></img>
+    <img src="https://i.imgur.com/vb0Zv9V.png" style={{ width: "125px", display: "inline" }}></img>
     <Header
       as="h2"
       content="Your only opportunity to swim the duck out of your life."
@@ -47,7 +48,7 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
         fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
+        marginTop: mobile ? "0.5em" : "0em"
       }}
     />
     <Button primary size="huge">
