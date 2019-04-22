@@ -25,10 +25,7 @@ import './Homepage.css';
 // Homepage Heading
 // 
 const HomepageHeading = ({ mobile }) => (
-  
-  <Container text style={{ position: "absolute", left: "0", right: "0", marginLeft: "auto", marginRight: "auto", top: "50%", marginTop: "-176.5px" }}>
-   {/* <div className="row align-items-center" style={{ width:"100%", height: "100vh", position: "absolute", top: "0", left: "0" }}> */}
-    {/* <div className="col"> */}
+  <Container text style={{ textAlign: "center", position: "absolute", left: "0", right: "0", marginLeft: "auto", marginRight: "auto", top: "50%", marginTop: "-176.5px" }}>
     <Header
       as="h1"
       content="Joy Swimming"
@@ -57,8 +54,6 @@ const HomepageHeading = ({ mobile }) => (
       Get Started
       <Icon name="right arrow" />
     </Button>
-     {/* </div> */}
-   {/* </div> */}
   </Container>
 );
 
@@ -128,21 +123,44 @@ class DesktopContainer extends React.Component {
           // onBottomPassed={this.showFixedMenu}
           // onBottomPassedReverse={this.hideFixedMenu}
         >
+          <Segment vertical style={{ position: "absolute", left: "0", right: "0", zIndex: "1", border: "none" }}>
+            <Menu
+                fixed={fixed ? "top" : null}
+                inverted={!fixed}
+                pointing={!fixed}
+                secondary={!fixed}
+                size="large"
+                stackable
+                style={{ border: "none", position: "absolute", left: "0", right: "0", zIndex: "1" }}
+              >
+                <Container>
+                  <Menu.Item as="a" active>
+                    Home
+                  </Menu.Item>
+                  <Menu.Item as={Link} to="/programs">Programs</Menu.Item>
+                  <Menu.Item as={Link} to="/about">About</Menu.Item>
+                  <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
+                  <Menu.Menu position="right">
+                    {this.renderLinks()}
+                  </Menu.Menu>
+                </Container>
+              </Menu>
+          </Segment>
           <Test />
-          <Segment
+          {/* <Segment
             inverted
             textAlign="center"
             style={{ height: "100vh", backgroundColor: "rgba(0,0,0,0.2)" }}
             vertical
-          >
-            <Menu
+          > */}
+            {/* <Menu
               fixed={fixed ? "top" : null}
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
               size="large"
               stackable
-              style={{ border: "none" }}
+              style={{ border: "none", position: "absolute", left: "0", right: "0" }}
             >
               <Container>
                 <Menu.Item as="a" active>
@@ -155,9 +173,9 @@ class DesktopContainer extends React.Component {
                   {this.renderLinks()}
                 </Menu.Menu>
               </Container>
-            </Menu>
+            </Menu> */}
             <HomepageHeading />
-          </Segment>
+          {/* </Segment> */}
         </Visibility>
 
         {children}
