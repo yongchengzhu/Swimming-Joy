@@ -132,7 +132,7 @@ class DesktopContainer extends React.Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ height: "100vh", /*opacity: "0.8",*/ backgroundColor: "rgba(0,0,0,0.2)"/*, position: "absolute", top: "0", left: "0", width: "100%"*/ }}
+            style={{ height: "100vh", backgroundColor: "rgba(0,0,0,0.2)" }}
             vertical
           >
             <Menu
@@ -188,44 +188,6 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    {/* <div className="container-fluid">
-      <div className="row align-items-center" style={{ height: "30vh" }}>
-        <div className="col">
-          <div className="row" style={{ textAlign: "center" }}>
-            <div className="col">
-              <div class="ui large statistic">
-                <div class="value">
-                  0
-                </div>
-                <div class="label">
-                  Views
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div class="ui large statistic">
-                <div class="value">
-                  0
-                </div>
-                <div class="label">
-                  Members
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div class="ui large statistic">
-                <div class="value">
-                  0
-                </div>
-                <div class="label">
-                  Purchases
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */}
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" />
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "0" }} src="https://www.solidbackgrounds.com/images/950x350/950x350-white-solid-color-background.jpg" />
     <div class="container-fluid" style={{ textAlign: "center", zIndex: "1" }}>
@@ -252,57 +214,6 @@ const Homepage = (props) => (
         </div>
       </div>
     </div>
-    {/* <Segment secondary style={{ height: "100vh", padding: "2em 5em", opacity: "0.9"}} vertical>
-      <Grid columns={3} style={{ marginLeft: "7em" }}>
-        <Grid.Row>
-          <Grid.Column>
-            <Segment circular inverted tertiary color="red" style={{ width: 200, height: 200 }}>
-              <Header as="h2">
-                Hardwork
-                <Header.Subheader></Header.Subheader>
-              </Header>
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment circular inverted tertiary color="teal" style={{ width: 200, height: 200 }}>
-              <Header as="h2">
-                Dedication
-                <Header.Subheader></Header.Subheader>
-              </Header>
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment circular inverted tertiary color="pink" style={{ width: 200, height: 200 }}>
-              <Header as="h2">
-                Perserverance
-                <Header.Subheader></Header.Subheader>
-              </Header>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row columns={1} centered>
-          <Grid.Column>
-            <Segment inverted textAlign="center" style={{ marginTop: "2em", marginRight: "8em" }}>
-              <Header as="h1">What are you waiting for? Join Us Today!</Header>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row style={{ marginTop: "3em" }}>
-          <Grid.Column>
-            <Header style={{ marginLeft: "5em" }}>LEARN</Header>
-            <Image src='https://www.fastweb.com/uploads/article_photo/photo/2161/crop380w_istock_000002193842xsmall-books.jpg' rounded style={{ width: "230px" }} />
-          </Grid.Column>
-          <Grid.Column>
-            <Header style={{ marginLeft: "5em" }}>ENJOY</Header>
-            <Image src='http://abouttambor.com/wp-content/uploads/2012/07/enjoy-life-in-costa-rica.jpg' rounded style={{ width: "230px" }} />
-          </Grid.Column>
-          <Grid.Column>
-            <Header style={{ marginLeft: "5em" }}>SWIM</Header>
-            <Image src='https://www.wcu.edu/WebGraphicsNew/CampSwimming.jpg' rounded style={{ width: "230px" }} />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment> */}
     <Footer />
   </ResponsiveContainer>
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Segment,
   Container,
@@ -10,6 +11,7 @@ import {
 
 import Heading from './Heading';
 import Footer from './Footer';
+import Checkout from './Checkout';
 
 class Programs extends React.Component {
   render() {

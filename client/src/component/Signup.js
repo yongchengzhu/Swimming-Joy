@@ -16,6 +16,7 @@ import "semantic-ui-css/semantic.min.css";
 import Heading from './Heading';
 import Footer from './Footer';
 import { signup } from '../actions';
+import './Signup.css';
 
 class Signup extends React.Component {
   onSubmit = (formProps) => {
@@ -31,13 +32,18 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        <Segment style={{ minHeight: "100vh", margin: "0"}}>
+        <Segment style={{ minHeight: "100vh", margin: "0", display: "flex", flexDirection: "column" }}>
           <Heading page="signup" />
-          <Grid textAlign="center" verticalAlign="middle">
+          <Grid className="main" textAlign="center" verticalAlign="middle" style={{ flexGrow: "1" }}>
+            <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as="h2" color="teal" textAlign="center">
-                Sign-up for an account
+              <Header id="title" as="h2" textAlign="center">
+                User Registration
               </Header>
+
+              <p id="desc" style={{ marginBottom: "2em" }}>Sign up for free account to use Joy Swimming's online services.</p>
+
+              
 
               <Form size="large" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Segment stacked>
@@ -72,16 +78,17 @@ class Signup extends React.Component {
                     />
                   </Form.Field>
                   {this.renderError(this.props.auth.error)}
-                  <Button color="teal" fluid size="large">
+                  <Button primary fluid size="large">
                     Sign Up
                   </Button>
                 </Segment>
               </Form>
 
-              <Message>
+              <Message style={{ fontWeight: "100" }}>
                 Already have an account? <Link to="/signin">Sign In</Link>
               </Message>
             </Grid.Column>
+            </Grid.Row>
           </Grid>
         </Segment>
         <Footer />
