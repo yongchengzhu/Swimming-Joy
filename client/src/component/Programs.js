@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { 
   Segment,
   Container,
@@ -9,11 +10,16 @@ import {
   Label
 } from 'semantic-ui-react';
 
+import { createOrder } from '../actions';
 import Heading from './Heading';
 import Footer from './Footer';
 import Checkout from './Checkout';
 
 class Programs extends React.Component {
+  onButtonClick = (title, price, quantity) => {
+    this.props.createOrder(title, price, quantity, () => this.props.history.push('/checkout'));
+  }
+
   render() {
     const square = { width: 170, height: 250, display: "flex", alignItems: "center", justifyContent: "center" }
 
@@ -50,7 +56,7 @@ class Programs extends React.Component {
                         </div>
                         <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0", textAlign: "center" }}>
                               <Header as="h3" style={{ fontWeight: "100" }}>$250.00</Header>
-                              <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                              <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                         </div>
                       </div>
                   </div>
@@ -72,7 +78,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$175.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Adults Program', 1, 175) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -94,7 +100,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$170.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Teens Program', 1, 170) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -119,7 +125,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$165.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Kids Program', 1, 165) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -141,7 +147,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$190.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Mom & Baby Class', 1, 190) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -163,7 +169,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$100.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick("Boys' & Girls' Night", 1, 100) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -187,7 +193,7 @@ class Programs extends React.Component {
                       </div>
                       <div style={{ position: "absolute", bottom:"20px", left: "0", right: "0" }}>
                             <Header as="h3" style={{ fontWeight: "100" }}>$25.00</Header>
-                            <Button primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Adults Membership', 1, 25) } primary style={{ borderRadius:"25px", width: "10em" }}>SELECT</Button>
                       </div>
                     </div>
                   </div>
@@ -202,4 +208,10 @@ class Programs extends React.Component {
   }
 }
 
-export default Programs;
+function mapStateToProps(state) {
+  return {
+    order: state.order
+  }
+}
+
+export default connect(mapStateToProps, { createOrder })(Programs);

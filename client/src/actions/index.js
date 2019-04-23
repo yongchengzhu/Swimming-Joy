@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { FETCH_USER, AUTH_ERROR } from './types';
+import { FETCH_USER, AUTH_ERROR, CREATE_ORDER } from './types';
 
 export const signup = ({ name, email, password }, callback) => async dispatch => {
   try {
@@ -47,4 +47,15 @@ export const fetchUser = () => async (dispatch, getState) => {
   response.data.token = authenticated;
 
   dispatch({ type: FETCH_USER, payload: response.data })
+}
+
+export const createOrder = (title, quantity, cost, callback) => async dispatch => {
+  const data = {
+    title: title,
+    quantity: quantity,
+    cost: cost
+  }
+
+  dispatch({ type: CREATE_ORDER, payload: data });
+  callback();
 }
