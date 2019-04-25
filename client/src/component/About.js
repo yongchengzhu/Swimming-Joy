@@ -7,9 +7,10 @@ import Footer from './Footer';
 class About extends React.Component {
   render() {
     return (
-      <div>
-        <Segment verticle style={{ minHeight: "100vh", margin: "0" }}>
+      <div style={{ background: "url('https://static.wixstatic.com/media/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.png/v1/fill/w_408,h_408,al_c,q_85/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.webp')", backgroundColor: "rgb(43, 158, 217)" }}>
+        <Segment vertical style={{ border:"none", margin: "0", paddingBottom: "0", backgroundColor: "rgb(26, 76, 102)" }}>
           <Heading page="about" />
+        </Segment>
           <div className="container" style={{ padding: "0 15em" }}>
             <div className="row">
               <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
@@ -28,7 +29,7 @@ class About extends React.Component {
             </div>
           </div>
           
-          <div className="container-fluid" style={{ backgroundColor: "seashell"/*, position: "absolute"*/, left: "0" }}>
+          <div className="container-fluid" style={{ backgroundColor: "seashell"/*, position: "absolute"*/, left: "0", opacity: "0.8" }}>
             <div className="row align-items-center" style={{ height: "40vh" }}>
               <div className="col" style={{ padding: "0 15em" }}>
                 <p style={{ fontSize: "20px", fontWeight: "600" }}>OUR MISSION:</p>
@@ -69,7 +70,7 @@ class About extends React.Component {
             <p><strong>Joy Swimming Inc</strong> will be opened Monday-Thursday from 8AM-6PM weekends (Fridays to Sundays) and from 7:00 am to 6:00 pm to offer the most flexibles schedule and for us to be able to accommodate customer with different time preference also to recruit enough staff to run shift among our workforce. We will go out of our way to acquire standard equipment and other customers’ needs or requests to keep them happy and be able to provide a healthier environment.</p>
             <p><strong>Joy Swimming Inc</strong> will be a family owned business, the business will be managed by Elvis Salcedo & Nikki Kwok, with a well over 8 years of experienced swimming instructors and 7 years in pool management in the United States.</p>
           </Container> */}
-        </Segment>
+        
         <Footer />
       </div>
     );

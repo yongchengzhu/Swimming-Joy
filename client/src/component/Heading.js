@@ -9,6 +9,8 @@ import {
 
 import { fetchUser } from '../actions';
 
+import './Heading.css'
+
 class Heading extends React.Component {
   componentDidMount() {
     this.props.fetchUser();
@@ -18,12 +20,13 @@ class Heading extends React.Component {
     if (this.props.auth.authenticated) {
       return (
         <React.Fragment>
-          <Menu.Item>
+          <Menu.Item style={{ color: "white" }}>
             {this.props.auth.name}
           </Menu.Item>
           <Menu.Item
             as={Link}
             to="/signout"
+            style={{ color: "white" }}
           >
             Sign Out
           </Menu.Item>
@@ -36,7 +39,7 @@ class Heading extends React.Component {
             as={Link}
             to="/signup"
             active={this.props.page === "signup"}
-            style={{ marginLeft: "0.5em" }}
+            style={{ marginLeft: "0.5em", color: "white" }}
           >
             Sign Up
           </Menu.Item>
@@ -44,6 +47,7 @@ class Heading extends React.Component {
             as={Link} 
             to="/signin"
             active={this.props.page === "signin"}
+            style={{ color: "white" }}
           >
             Sign In
           </Menu.Item>
@@ -56,10 +60,10 @@ class Heading extends React.Component {
     return (
       <Menu secondary pointing size="large" stackable>
         <Container>
-          <Menu.Item as={Link} to="/">Home</Menu.Item>
-          <Menu.Item as={Link} to="/programs" active={this.props.page === "program"}>Programs</Menu.Item>
-          <Menu.Item as={Link} to="/about" active={this.props.page === "about"}>About</Menu.Item>
-          <Menu.Item as={Link} to="/contact" active={this.props.page === "contact"}>Contact</Menu.Item>
+          <Menu.Item as={Link} to="/" style={{ color: "white" }}>Home</Menu.Item>
+          <Menu.Item as={Link} to="/programs" active={this.props.page === "program"} style={{ color: "white" }}>Programs</Menu.Item>
+          <Menu.Item as={Link} to="/about" active={this.props.page === "about"} style={{ color: "white" }}>About</Menu.Item>
+          <Menu.Item as={Link} to="/contact" active={this.props.page === "contact"} style={{ color: "white" }}>Contact</Menu.Item>
 
           <Menu.Menu position="right">
             {this.renderLinks()}

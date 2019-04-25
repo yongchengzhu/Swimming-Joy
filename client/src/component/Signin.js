@@ -26,9 +26,10 @@ class Signin extends React.Component {
   render() {
     return (
       <div>
-        <Segment style={{ minHeight: "100vh", margin: "0", display: "flex", flexDirection: "column" }}>
-        <Heading page="signin" />
-          <Grid className="main" textAlign="center" verticalAlign="middle" style={{ flexGrow: "1" }}>
+        <Segment style={{ margin: "0", backgroundColor: "rgb(26, 76, 102)", border: "none", paddingBottom: "0" }}>
+          <Heading page="signin" />
+        </Segment>
+          <Grid className="main" textAlign="center" verticalAlign="middle" style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header id="title" as="h2" textAlign="center">
                 User Login
@@ -69,7 +70,7 @@ class Signin extends React.Component {
               </Message>
             </Grid.Column>
           </Grid>
-        </Segment>
+        
         <Footer />
       </div>
     );

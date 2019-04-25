@@ -206,6 +206,40 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
+    <div style={{ padding: "1em 0em", height: "100vh", display: "flex", flexDirection: "column" }}>
+      <div className="container-fluid" style={{ /*backgroundColor: "steelblue",*/ flexGrow: "1", display: "flex", background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.swimswam.com/wp-content/uploads/2018/02/stock-by-Mike-Lewis-LDM_1946.jpg') no-repeat center center fixed", backgroundSize: "cover" }}>
+        <div className="row align-items-center" style={{ flexGrow: "1" }}>
+          <div className="col">
+            <div className="row">
+              <div className="col" align="center">
+                <Header id="underline" as="h1" style={{ color: "white" }}>BECOME THE SWIMMER YOU DREAMED TO BE</Header>
+              </div>
+            </div>
+            <div className="row justify-content-center" style={{ marginTop: "5em" }}>
+              <div className="col-4" align="right">
+                <Segment circular inverted secondary color="red" style={{ border: "none", width: "250px", height: "250px"/*, background: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg')", backgroundPosition: "center" */}}>
+                  <Header style={{ color: "white" }}> Hardwork </Header>
+                  <Header.Subheader style={{ color: "white", fontSize: "15px" }}>Life rewards those who work hard on it.</Header.Subheader>
+                </Segment>
+              </div>
+              <div className="col-4" align="center">
+                <Segment circular inverted secondary color="blue" style={{ width: "250px", height: "250px"/*, background: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg')"*/ }}>
+                  <Header style={{ color: "white" }}>Dedication</Header>
+                  <Header.Subheader style={{ color: "white", fontSize: "15px" }}>Relentless practice is the key to become the best.</Header.Subheader>
+                </Segment>
+              </div>
+              <div className="col-4" align="left">
+                <Segment circular inverted secondary color="green" style={{ width: "250px", height: "250px"/*, background: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg')"*/ }}>
+                  <Header style={{ color: "white" }}>Perseverance</Header>
+                  <Header.Subheader style={{ color: "white", fontSize: "15px" }}>The last man standing is the winner.</Header.Subheader>
+                </Segment>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "-1" }} src="https://www.sciencedaily.com/images/2018/11/181114132013_1_540x360.jpg" />
     <img style={{ height: "100vh", width: "100%", position: "absolute", opacity: "0.6", zIndex: "0" }} src="https://www.solidbackgrounds.com/images/950x350/950x350-white-solid-color-background.jpg" />
     <div class="container-fluid" style={{ textAlign: "center", zIndex: "1" }}>

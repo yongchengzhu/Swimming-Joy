@@ -1,3 +1,24 @@
 .ui.secondary.inverted.menu a.item {
   color: white !important;
 }
+
+h1#underline.ui.header {
+  padding-bottom: 5px;
+}
+
+.ui.secondary.inverted.pointing.menu .active.item {
+  color: white!important;
+}
+
+h1#underline.ui.header:before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  border-bottom: 2px solid white;
+}
