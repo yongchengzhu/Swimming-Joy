@@ -14,6 +14,7 @@ import { createOrder } from '../actions';
 import Heading from './Heading';
 import Footer from './Footer';
 import Checkout from './Checkout';
+import './font.css'
 
 class Programs extends React.Component {
   onButtonClick = (title, price, quantity) => {
