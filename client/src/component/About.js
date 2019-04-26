@@ -7,11 +7,26 @@ import Footer from './Footer';
 class About extends React.Component {
   render() {
     return (
-      <div style={{ background: "url('https://static.wixstatic.com/media/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.png/v1/fill/w_408,h_408,al_c,q_85/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.webp')", backgroundColor: "rgb(43, 158, 217)" }}>
+      <div style={{  }}>
         <Segment vertical style={{ border:"none", margin: "0", paddingBottom: "0", backgroundColor: "rgb(26, 76, 102)" }}>
           <Heading page="about" />
         </Segment>
-          <div className="container" style={{ padding: "0 15em" }}>
+
+        {/* Page Title */}
+        <div className="container-fluid" style={{ margin: "1em 0" }}>
+          <div className="row justify-content-center">
+            <div className="col-auto">
+              <p style={{ fontFamily: "MuseoW01-700", fontSize: "57px", color: "#1A4C66" }}>Joy <span style={{ color: "#2B9ED9" }}>Swimming</span></p>
+            </div>
+          </div>
+        </div>
+
+        {/* Wavy Seperator */}
+        <div style={{ width: "100%", height: "18px", backgroundSize: "auto", backgroundRepeat: "repeat", backgroundPosition: "center center", backgroundImage: "url('https://static.wixstatic.com/media/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.png/v1/crop/x_0,y_1,w_110,h_19,q_85/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.webp')"}}></div>  
+        
+
+        {/* Content */}
+          <div className="container-fluid" style={{ padding: "0 15em", background: "url('https://static.wixstatic.com/media/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.png/v1/fill/w_408,h_408,al_c,q_85/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.webp')", backgroundColor: "rgb(43, 158, 217)" }}>
             <div className="row">
               <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100" }}>About Us</p>
@@ -29,6 +44,7 @@ class About extends React.Component {
             </div>
           </div>
           
+          {/* Absolute Position Content */}
           <div className="container-fluid" style={{ backgroundColor: "seashell"/*, position: "absolute"*/, left: "0", opacity: "0.8" }}>
             <div className="row align-items-center" style={{ height: "40vh" }}>
               <div className="col" style={{ padding: "0 15em" }}>
@@ -45,7 +61,8 @@ class About extends React.Component {
             </div>
           </div>
 
-          <div className="container" style={{ padding: "0 15em" }}>
+          {/* Bottom Content */}
+          <div className="container-fluid" style={{ padding: "0 15em", background: "url('https://static.wixstatic.com/media/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.png/v1/fill/w_408,h_408,al_c,q_85/a9ff3b_38e5f9b5a82546a689f8013ed6fce03b.webp')", backgroundColor: "rgb(43, 158, 217)" }}>
             <div className="row">
               <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100" }}>Open Hours</p>
