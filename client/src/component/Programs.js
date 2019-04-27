@@ -51,13 +51,13 @@ class Programs extends React.Component {
               </div>
             </div>
             <div className="row align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-              <div className="col-10" style={{ textAlign: "center", backgroundColor: "white", borderRadius: "25px" }}>
+              <div className="col-9" style={{ textAlign: "center", backgroundColor: "white", borderRadius: "25px" }}>
                 {/* First row */}
                 <div className="row justify-content-center" style={{ margin: "1em 0em"}}>
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                      <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
+                      <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
                         <div className="col">
-                          <i className="fas fa-life-ring" style={{ margin: "20% 0", fontSize: "9em" }} />
+                          <i className="fas fa-life-ring" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                           <div style={{ textAlign: "left" }}>
                             <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Lifeguard Training</Header>
                             <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "1.1vw" }}>
@@ -68,16 +68,20 @@ class Programs extends React.Component {
                                 <li>Swimming & Written Exams</li>
                               </ul>
                               <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$250.00</p>
-                              <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                              <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                             </div>
                           </div>
                         </div>
+                        {/* <div style={{ position: "absolute", bottom: "10px", fontFamily: "MuseoW01-700" }}>
+                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$250.00</p>
+                            <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } style={{ marginBottom: "0px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                        </div> */}
                       </div>
                   </div>
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                    <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
+                    <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
                       <div className="col">
-                        <i className="fas fa-swimmer" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-swimmer" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Adults Program</Header>
                           <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "1.1vw" }}>
@@ -88,7 +92,7 @@ class Programs extends React.Component {
                               <li>Safety Skills</li>
                             </ul>
                             <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$175.00</p>
-                            <Button onClick={ () => this.onButtonClick('Adults Program', 1, 175) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Adults Program', 1, 175) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
@@ -97,18 +101,18 @@ class Programs extends React.Component {
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
                       <div className="col">
-                        <i className="fas fa-running" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-running" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Teens Program</Header>
                           <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "1.1vw" }}>
-                            <p style={{ textAlign: "left" }}>Trainee must be 10-17 years old. Learn basic swimming techniques.</p>
+                            <p style={{ textAlign: "left" }}>Trainee must be 10-17 years old. Learn basic techniques.</p>
                             <ul style={{ textAlign: "left" }}>
                               <li>8 Lessons</li>
                               <li>Swim Without Assistance</li>
                               <li>Athletic Trainings</li>
                             </ul>
                             <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$170.00</p>
-                            <Button onClick={ () => this.onButtonClick('Teens Program', 1, 170) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Teens Program', 1, 170) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
@@ -118,9 +122,9 @@ class Programs extends React.Component {
                 {/* Second Row */}
                 <div className="row justify-content-center" style={{ margin: "1em 0em" }}>
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                    <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
+                    <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
                       <div className="col">
-                        <i className="fas fa-child" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-child" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Kids Program</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "1.1vw" }}>
@@ -131,7 +135,7 @@ class Programs extends React.Component {
                               <li>Breath Control</li>
                             </ul>
                             <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$165.00</p>
-                            <Button onClick={ () => this.onButtonClick('Kids Program', 1, 165) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Kids Program', 1, 165) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
@@ -140,18 +144,18 @@ class Programs extends React.Component {
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
                       <div className="col">
-                        <i className="fas fa-baby" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-baby" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Mom & Baby Class</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "1.1vw" }}>
                             <p style={{ textAlign: "left" }}>Introductory swimming course for toddlers and parents.</p>
                             <ul style={{ textAlign: "left" }}>
                               <li>8 Lessons</li>
-                              <li>Parents / Guardians required</li>
-                              <li>Get toddler familiar with water</li>
+                              <li>Parent required</li>
+                              <li>Familiarize Water</li>
                             </ul>
                             <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$190.00</p>
-                            <Button onClick={ () => this.onButtonClick('Mom & Baby Class', 1, 190) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Mom & Baby Class', 1, 190) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
@@ -160,7 +164,7 @@ class Programs extends React.Component {
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
                       <div className="col">
-                        <i className="fas fa-glass-cheers" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-glass-cheers" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Boys' & Girls' Night</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "1.1vw" }}>
@@ -171,7 +175,7 @@ class Programs extends React.Component {
                               <li>Time to Party!</li>
                             </ul>
                             <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "1.1vw" }}>$100.00</p>
-                            <Button onClick={ () => this.onButtonClick("Boys' & Girls' Night", 1, 100) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick("Boys' & Girls' Night", 1, 100) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
@@ -183,7 +187,7 @@ class Programs extends React.Component {
                   <div className="" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px", width: "31%" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
                       <div className="col">
-                        <i className="fas fa-swimming-pool" style={{ margin: "20% 0", fontSize: "9em" }} />
+                        <i className="fas fa-swimming-pool" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
                           <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Adults Membership</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "1.1vw" }}>
@@ -193,7 +197,7 @@ class Programs extends React.Component {
                               <li>Personal Trainer</li>
                             </ul>
                             <p style={{ textAlign: "center", fontSize: "15px", fontSize: "1.1vw" }}>$25.00</p>
-                            <Button onClick={ () => this.onButtonClick('Adults Membership', 1, 25) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <Button onClick={ () => this.onButtonClick('Adults Membership', 1, 25) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
