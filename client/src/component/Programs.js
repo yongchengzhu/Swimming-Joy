@@ -51,7 +51,7 @@ class Programs extends React.Component {
               </div>
             </div>
             <div className="row align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-              <div className="col-9" style={{ textAlign: "center", backgroundColor: "white", borderRadius: "25px" }}>
+              <div className="col-8" style={{ textAlign: "center", backgroundColor: "white", borderRadius: "25px" }}>
                 {/* First row */}
                 <div className="row justify-content-center" style={{ margin: "1em 0em"}}>
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
