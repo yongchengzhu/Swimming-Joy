@@ -30,7 +30,7 @@ class About extends React.Component {
           {/* About Us */}
           <div className="container-fluid" style={{ padding: "0 15em"}}>
             <div className="row">
-              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
+              <div className="col-8" style={{ textAlign: "left", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>About Us</p>
                 <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>Joy Swimming Inc is a standard and well-equipped chlorinated 25 yards 
                   indoor swimming pool located in the heart of the rockaway’s towns. Our main 
@@ -43,6 +43,10 @@ class About extends React.Component {
                   from fundamentals to high-level techniques.
                 </p>
               </div>
+
+              <div className="col" style={{ margin: "4em 0" }}>
+                [Images Here]
+              </div>
             </div>
           </div>
 
@@ -52,7 +56,11 @@ class About extends React.Component {
           {/* Our Mission */}
           <div className="container-fluid" style={{ padding: "0 15em"}}>
             <div className="row">
-              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
+              <div className="col" style={{ margin: "4em 0em" }}>
+                [Images here]
+              </div>
+
+              <div className="col-8" style={{ textAlign: "right", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>Our Mission</p>
                 <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>
                   JSI's mission is to provide a sport facility that enhances the health, fitness, 
@@ -60,26 +68,6 @@ class About extends React.Component {
                   pool facility which will include multiple swimming activities such as competition, 
                   water challenges and other related activities and engage commuters in sporting 
                   activities, health and fitness and to fight against obesity and unhealthy lifestyle.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Separator */}
-          <div style={{ width: "100%", height: "37px", backgroundSize: "auto", backgroundPosition: "center center", backgroundImage: "url('https://static.wixstatic.com/media/84770f_effc02db3b64431fa384e9028bc63812~mv2.png/v1/crop/x_0,y_0,w_218,h_33,q_85/84770f_effc02db3b64431fa384e9028bc63812~mv2.webp')" }}></div>
-        
-          {/* Open Hours */}
-          <div className="container-fluid" style={{ padding: "0 15em"}}>
-            <div className="row">
-              <div className="col" style={{ textAlign: "center", margin: "4em 0em" }}>
-                <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>Open Hours</p>
-                <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>
-                  Joy Swimming Inc will be opened Monday - Thursday from 8AM - 6PM weekends 
-                  (Fridays to Sundays) and from 7:00 am to 6:00 pm to offer the most flexibles 
-                  schedule and for us to be able to accommodate customer with different time 
-                  preference also to recruit enough staff to run shift among our workforce. We will 
-                  go out of our way to acquire standard equipment and other customers’ needs or 
-                  requests to keep them happy and be able to provide a healthier environment. 
                 </p>
               </div>
             </div>

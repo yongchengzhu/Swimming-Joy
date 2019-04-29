@@ -44,7 +44,7 @@ class Contact extends React.Component {
             {/* Opening Times Row */}
             <div className="row" style={{ marginTop: "2em" }}>
               <div className="col">
-                <p style={{ color: "white" }}>
+                <p style={{ color: "white", lineHeight: "1.2" }}>
                   <span style={{ fontFamily: "MuseoW01-700", fontSize: "21px" }}>Opening Times</span><br />
                   <span style={{ fontSize: "24px" }}>Mon - Thu: 8am - 6pm <br />
                   Fri - Sun: 7am - 6pm
