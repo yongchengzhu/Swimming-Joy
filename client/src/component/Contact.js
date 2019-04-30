@@ -30,31 +30,34 @@ class Contact extends React.Component {
           <div className ="container-fluid" style={{ padding: "3em 15em" }}>
             {/* Contact Us Row */}
             <div className="row">
-              <div className="col">
-                <p style={{ fontFamily: "MuseoW01-700", fontSize: "57px", color: "white" }}>Contact Us</p>
-                <p style={{ fontSize: "24px", color: "white" }}>
+              <div className="col-7">
+                <p style={{ fontFamily: "MuseoW01-700", fontSize: "3em", color: "white" }}>Contact Us</p>
+                <p style={{ fontSize: "1.7em", color: "white" }}>
                   Joy Swimming is located in the heart of the Rockaways town. The center is open 6 days a week, and on most public holidays.
                 </p>
               </div>
-              <div className="col" align="center">
-                [Images Here]
+              <div className="col">
+                <img src={require('../images/baby.webp')} style={{ width: "12em", position: "absolute", left: "0" }} />
+                <img src={require('../images/bubbles.webp')} style={{ width: "5em", position: "absolute", right: "0" }} />
               </div>
             </div>
 
             {/* Opening Times Row */}
             <div className="row" style={{ marginTop: "2em" }}>
               <div className="col">
-                <p style={{ color: "white", lineHeight: "1.2" }}>
-                  <span style={{ fontFamily: "MuseoW01-700", fontSize: "21px" }}>Opening Times</span><br />
-                  <span style={{ fontSize: "24px" }}>Mon - Thu: 8am - 6pm <br />
+                <p style={{ color: "white", lineHeight: "1.4" }}>
+                  <span style={{ fontFamily: "MuseoW01-700", fontSize: "1.5em" }}>Opening Times</span><br />
+                  <span style={{ fontSize: "1.7em" }}>Mon - Thu: 8am - 6pm <br />
                   Fri - Sun: 7am - 6pm
                   </span>
                 </p>
+                <img src={require('../images/swimmer.webp')} style={{ width: "23em", position: "absolute", bottom: "0", left: "40%" }} />
+                <img src={require('../images/ring2.webp')} style={{ width: "6em", position: "absolute", right: "5%", top: "0" }} />
               </div>
 
-              <div className="col" align="center">
-                [Images Here]
-              </div>
+              {/* <div className="col">
+                <img src={require('../images/ring2.webp')} style={{ width: "6em", position: "absolute", right: "5%" }} />
+              </div> */}
             </div>
           </div>
 
@@ -70,12 +73,27 @@ class Contact extends React.Component {
                     For any queries please contact us on 929-306-9175 or fill out your details and one of our
                     Joy Swimming representatives will get back to you as soon as possible.
                 </p>
-                [Image goes here]
+                <img src={require('../images/swimmer2.webp')} style={{ width: "24em" }} />
+                <img src={require('../images/sweat.webp')} style={{ width: "3em", marginLeft: "1em" }} />
               </div>
 
               {/* Form Column */}
-              <div className="col" align="center">
-                [Form goes here]
+              <div className="col" align="right">
+                <form className="ui form">
+                  <div className="field">
+                    <input placeholder="Name" />
+                  </div>
+                  <div className="field">
+                    <input placeholder="Email" />
+                  </div>
+                  <div className="field">
+                    <input placeholder="Phone" />
+                  </div>
+                  <div className="field">
+                    <textarea />
+                  </div>
+                  <div><button className="ui button">Submit</button></div>
+                </form>
               </div>
             </div>
           </div>

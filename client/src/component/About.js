@@ -30,8 +30,8 @@ class About extends React.Component {
           {/* About Us */}
           <div className="container-fluid" style={{ padding: "0 15em"}}>
             <div className="row">
-              <div className="col-8" style={{ textAlign: "left", margin: "4em 0em" }}>
-                <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>About Us</p>
+              <div className="col-7" style={{ textAlign: "left", margin: "4em 0em" }}>
+                <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>About Us <span style={{ position: "absolute", right: "10%" }}><img src={require('../images/goggle.webp')} style={{ width: "2.5em" }} /></span></p>
                 <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>Joy Swimming Inc is a standard and well-equipped chlorinated 25 yards 
                   indoor swimming pool located in the heart of the rockaway’s towns. Our main 
                   goal on setting this business is with the aim to engage and encourage parents 
@@ -45,7 +45,11 @@ class About extends React.Component {
               </div>
 
               <div className="col" style={{ margin: "4em 0" }}>
-                [Images Here]
+                <img src={require('../images/bubbles.webp')} style={{ width: "4.5em", position: "absolute", left: "20%" }} />
+                <img src={require('../images/board.webp')} style={{ width: "8em", transform: "rotate(85deg)", position: "absolute", right: "0" }} />
+                <img src={require('../images/ring.webp')} style={{ width: "8em", position: "absolute", top: "30%"}} />
+                <img src={require('../images/circle.webp')} style={{ width: "8em", position: "absolute", bottom: "0", right: "0" }} />
+                <img src={require('../images/bubbles.webp')} style={{ width: "4.5em", position: "absolute", bottom: "0", left: "40%", transform: "rotate(150deg)" }} />
               </div>
             </div>
           </div>
@@ -57,10 +61,12 @@ class About extends React.Component {
           <div className="container-fluid" style={{ padding: "0 15em"}}>
             <div className="row">
               <div className="col" style={{ margin: "4em 0em" }}>
-                [Images here]
+                <img src={require('../images/bubbles.webp')} style={{ width: "4.5em", position: "absolute", left: "0" }} />
+                <img src={require('../images/board.webp')} style={{ width: "8em", position: "absolute", right: "0", top: "0%" }} />
+                <img src={require('../images/swimmer3.webp')} style={{ width: "24em", position: "absolute", bottom: "0" }} />
               </div>
 
-              <div className="col-8" style={{ textAlign: "right", margin: "4em 0em" }}>
+              <div className="col-7" style={{ textAlign: "right", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>Our Mission</p>
                 <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>
                   JSI's mission is to provide a sport facility that enhances the health, fitness, 
