@@ -21,12 +21,12 @@ class Footer extends React.Component {
                   <List.Item as={Link} to="/contact">Contact Us</List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={3}>
+              {/* <Grid.Column width={3}>
                 <Header inverted as="h4" content="Services" />
                 <List link inverted>
                   <List.Item as="a">Placeholder</List.Item>
                 </List>
-              </Grid.Column>
+              </Grid.Column> */}
               <Grid.Column width={7}>
                 <Header as="h4" inverted>
                   Location
