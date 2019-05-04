@@ -29,10 +29,11 @@ class Footer extends React.Component {
               </Grid.Column>
               <Grid.Column width={7}>
                 <Header as="h4" inverted>
-                  Title
+                  Location
                 </Header>
                 <p>
-                  Space for placeholder.
+                  5124 Beach Channel Dr Far Rockaway NY, 11691 <br />
+                  Tel: 929-306-9175
                 </p>
               </Grid.Column>
             </Grid.Row>
