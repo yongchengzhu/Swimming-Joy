@@ -3,26 +3,22 @@ import { Segment, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import Heading from './Heading';
+import Title from './Title';
 import Footer from './Footer';
+import Payments from './Payments';
 import './Signup.css';
 
 class Checkout extends React.Component {
   render() {
     return (
       <div>
-        <div style={{ height: "100vh", border: "1px solid red", display: "flex", flexDirection: "column" }}>
+        <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
           <Segment vertical style={{ border:"none", margin: "0", paddingBottom: "0", backgroundColor: "rgb(26, 76, 102)" }}>
             <Heading />
           </Segment>
 
           {/* Page Title */}
-          <div className="container-fluid" style={{ margin: "1em 0" }}>
-            <div className="row justify-content-center">
-              <div className="col-auto">
-                <p style={{ fontFamily: "MuseoW01-700", fontSize: "57px", color: "#1A4C66" }}>Joy <span style={{ color: "#2B9ED9" }}>Swimming</span></p>
-              </div>
-            </div>
-          </div>
+          <Title />
 
           {/* Wavy Separator */}
           <div style={{ width: "100%", height: "18px", backgroundSize: "auto", backgroundRepeat: "repeat", backgroundPosition: "center center", backgroundImage: "url('https://static.wixstatic.com/media/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.png/v1/crop/x_0,y_1,w_110,h_19,q_85/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.webp')"}}></div>  
@@ -40,7 +36,8 @@ class Checkout extends React.Component {
                 </div>
                 <div className="row justify-content-center">
                   <div className="col-3">
-                    <div className="ui primary button">Check Out</div>
+                    <Payments />
+                    {/* <div className="ui primary button">Check Out</div> */}
                   </div>
                 </div>
                 {/* End column */}

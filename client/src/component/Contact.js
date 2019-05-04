@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Container, Segment } from 'semantic-ui-react';
 
 import Heading from './Heading';
+import Title from './Title';
 import Footer from './Footer';
 
 class Contact extends React.Component {
@@ -13,13 +14,7 @@ class Contact extends React.Component {
         </Segment>
 
          {/* Page Title */}
-         <div className="container-fluid" style={{ margin: "1em 0" }}>
-          <div className="row justify-content-center">
-            <div className="col-auto">
-              <p style={{ fontFamily: "MuseoW01-700", fontSize: "57px", color: "#1A4C66" }}>Joy <span style={{ color: "#2B9ED9" }}>Swimming</span></p>
-            </div>
-          </div>
-        </div>
+         <Title />
 
         {/* Wavy Seperator */}
         <div style={{ width: "100%", height: "18px", backgroundSize: "auto", backgroundRepeat: "repeat", backgroundPosition: "center center", backgroundImage: "url('https://static.wixstatic.com/media/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.png/v1/crop/x_0,y_1,w_110,h_19,q_85/84770f_1fb4564174274a7bbf84eb9f3df9afda~mv2.webp')"}}></div>  
@@ -70,7 +65,7 @@ class Contact extends React.Component {
               {/* Text Column */}
               <div className="col">
                 <p style={{ fontSize: "24px", color: "white" }}>
-                    For any queries please contact us on 929-306-9175 or fill out your details and one of our
+                    For any questions please contact us on 929-306-9175 or fill out your details and one of our
                     Joy Swimming representatives will get back to you as soon as possible.
                 </p>
                 <img src={require('../images/swimmer2.webp')} style={{ width: "24em" }} />
