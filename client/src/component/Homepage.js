@@ -50,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em"
       }}
     />
-    <Button primary size="huge">
+    <Button as={Link} to='/programs' primary size="huge">
       Get Started
       <Icon name="right arrow" />
     </Button>
@@ -231,7 +231,7 @@ const Homepage = (props) => (
               <div className="col-4" align="left">
                 <Segment circular inverted secondary color="green" style={{ width: "250px", height: "250px"/*, background: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg')"*/ }}>
                   <Header style={{ color: "white" }}>Perseverance</Header>
-                  <Header.Subheader style={{ color: "white", fontSize: "15px" }}>The last man standing is the winner.</Header.Subheader>
+                  <Header.Subheader style={{ color: "white", fontSize: "15px" }}>Success is found in the voyage of countless failures.</Header.Subheader>
                 </Segment>
               </div>
             </div>

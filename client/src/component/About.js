@@ -27,13 +27,14 @@ class About extends React.Component {
             <div className="row">
               <div className="col-7" style={{ textAlign: "left", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>About Us <span style={{ position: "absolute", right: "10%" }}><img src={require('../images/goggle.webp')} style={{ width: "2.5em" }} /></span></p>
-                <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>Joy Swimming Inc is a standard and well-equipped chlorinated 25 yards 
+                <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>
+                  Joy Swimming Inc is a standard and well-equipped chlorinated 25 yards 
                   indoor swimming pool located in the heart of the rockaway’s towns. Our main 
-                  goal on setting this business is with the aim to engage and encourage parents 
-                  and as well kids to participate in sport activity since one’s promotes health, 
-                  can help keep a healthy lifestyle, self-therapy, stress reliver, , fitness, fun, 
+                  goal on starting this business is to engage and encourage parents as well kids 
+                  to participate in sport activities. Our structured programs and water activities provide many health benefits
+                  that may ultimately lead one to a healthier lifestyle, such as promoting self-therapy, stress reliver, fitness, fun, 
                   socialization and most of all learn a life saving skill that one day could save 
-                  their own life or some else’s life. As well teach adults and kids how to defend 
+                  their own life or someone else’s life. Moreover, we teach adults and kids on how to defend 
                   and handle difficult situations in deep waters by providing the necessaries skills 
                   from fundamentals to high-level techniques.
                 </p>
@@ -64,7 +65,7 @@ class About extends React.Component {
               <div className="col-7" style={{ textAlign: "right", margin: "4em 0em" }}>
                 <p style={{ fontSize: "3em", fontWeight: "100", fontFamily: "MuseoW01-700", color: "white" }}>Our Mission</p>
                 <p style={{ fontWeight: "100", fontSize: "18px", color: "white" }}>
-                  JSI's mission is to provide a sport facility that enhances the health, fitness, 
+                  Joy Swimming Inc's mission is to provide a sport facility that enhances the health, fitness, 
                   safety, recreation and quality of life for all in Joy Swimming Inc. An indoor 
                   pool facility which will include multiple swimming activities such as competition, 
                   water challenges and other related activities and engage commuters in sporting 

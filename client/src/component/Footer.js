@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Segment,
   Container,
@@ -17,7 +18,7 @@ class Footer extends React.Component {
               <Grid.Column width={3}>
                 <Header inverted as="h4" content="About" />
                 <List link inverted>
-                  <List.Item as="a">Contact Us</List.Item>
+                  <List.Item as={Link} to="/contact">Contact Us</List.Item>
                 </List>
               </Grid.Column>
               <Grid.Column width={3}>

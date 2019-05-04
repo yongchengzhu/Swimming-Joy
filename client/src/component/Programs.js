@@ -47,81 +47,14 @@ class Programs extends React.Component {
             </div>
             <div className="row align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
               <div className="col-md-8" style={{ textAlign: "center", backgroundColor: "white", borderRadius: "25px" }}>
-                {/* First row */}
-                <div className="row justify-content-center" style={{ margin: "1em 0em"}}>
-                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                      <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
-                        <div className="col">
-                          <i className="fas fa-life-ring" style={{ margin: "3vw 0", fontSize: "9vw" }} />
-                          <div style={{ textAlign: "left" }}>
-                            <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Lifeguard Training</Header>
-                            <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
-                              <p style={{ textAlign: "left" }}>Effective trainings and guidances from our professional trainers.</p>
-                              <ul style={{ textAlign: "left" }}>
-                                <li>40 Hours of Training</li>
-                                <li>CPR Course</li>
-                                <li>Swimming & Written Exams</li>
-                              </ul>
-                              <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$250.00</p>
-                              <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <div style={{ position: "absolute", bottom: "10px", fontFamily: "MuseoW01-700" }}>
-                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$250.00</p>
-                            <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } style={{ marginBottom: "0px", borderRadius:"25px", width: "10em", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
-                        </div> */}
-                      </div>
-                  </div>
-                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                    <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
-                      <div className="col">
-                        <i className="fas fa-swimmer" style={{ margin: "3vw 0", fontSize: "9vw" }} />
-                        <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Adults Program</Header>
-                          <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
-                            <p style={{ textAlign: "left" }}>Trainee must be over the age of 18. Learn to swim in less than a month.</p>
-                            <ul style={{ textAlign: "left" }}>
-                              <li>8 Lessons</li>
-                              <li>Basic Level Swimming</li>
-                              <li>Safety Skills</li>
-                            </ul>
-                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$175.00</p>
-                            <Button onClick={ () => this.onButtonClick('Adults Program', 1, 175) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
-                    <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
-                      <div className="col">
-                        <i className="fas fa-running" style={{ margin: "3vw 0", fontSize: "9vw" }} />
-                        <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Teens Program</Header>
-                          <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
-                            <p style={{ textAlign: "left" }}>Trainee must be 10-17 years old. Learn basic techniques.</p>
-                            <ul style={{ textAlign: "left" }}>
-                              <li>8 Lessons</li>
-                              <li>Swim Without Assistance</li>
-                              <li>Athletic Trainings</li>
-                            </ul>
-                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$170.00</p>
-                            <Button onClick={ () => this.onButtonClick('Teens Program', 1, 170) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Second Row */}
+                {/* First Row */}
                 <div className="row justify-content-center" style={{ margin: "1em 0em" }}>
                   <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
                       <div className="col">
                         <i className="fas fa-child" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Kids Program</Header>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Kids Program</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "0.9vw" }}>
                             <p style={{ textAlign: "left" }}>Trainee must be 6-9 years old. Learn basic aquatic skills.</p>
                             <ul style={{ textAlign: "left" }}>
@@ -141,7 +74,7 @@ class Programs extends React.Component {
                       <div className="col">
                         <i className="fas fa-baby" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Mom & Baby Class</Header>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Mom & Baby Class</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "0.9vw" }}>
                             <p style={{ textAlign: "left" }}>Introductory swimming course for toddlers and parents.</p>
                             <ul style={{ textAlign: "left" }}>
@@ -161,7 +94,7 @@ class Programs extends React.Component {
                       <div className="col">
                         <i className="fas fa-glass-cheers" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Boys' & Girls' Night</Header>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Boys' & Girls' Night</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "0.9vw" }}>
                             <p style={{ textAlign: "left" }}>Reserve our spacious campus for the beautiful night.</p>
                             <ul style={{ textAlign: "left" }}>
@@ -177,22 +110,85 @@ class Programs extends React.Component {
                     </div>
                   </div>
                 </div>
+                {/* Second row */}
+                <div className="row justify-content-center" style={{ margin: "1em 0em"}}>
+                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
+                      <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
+                        <div className="col">
+                          <i className="fas fa-swimming-pool" style={{ margin: "3vw 0", fontSize: "9vw" }} />
+                          <div style={{ textAlign: "left" }}>
+                            <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Adults Membership</Header>
+                            <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
+                              <p style={{ textAlign: "left" }}>Keep up with your swimming everyday.</p>
+                              <ul style={{ textAlign: "left" }}>
+                                <li>Unlimited Facility Access</li>
+                                <li>Personal Trainer</li>
+                              </ul>
+                              <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$25.00</p>
+                              <Button onClick={ () => this.onButtonClick('Adults Membership', 1, 25) } style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-start" style={{ height: "100%", padding: "0 0em" }}>
+                      <div className="col">
+                        <i className="fas fa-swimmer" style={{ margin: "3vw 0", fontSize: "9vw" }} />
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Adults Program</Header>
+                          <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
+                            <p style={{ textAlign: "left" }}>Trainee must be over the age of 18. Learn to swim in less than a month.</p>
+                            <ul style={{ textAlign: "left" }}>
+                              <li>8 Lessons</li>
+                              <li>Basic Level Swimming</li>
+                              <li>Safety Skills</li>
+                            </ul>
+                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$175.00</p>
+                            <Button onClick={ () => this.onButtonClick('Adults Program', 1, 175) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px" }}>
+                    <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
+                      <div className="col">
+                        <i className="fas fa-running" style={{ margin: "3vw 0", fontSize: "9vw" }} />
+                        <div style={{ textAlign: "left" }}>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Teens Program</Header>
+                          <div style={{ fontFamily: "MuseoW01-700", color: "#1A4C66", textAlign: "center", fontSize: "0.9vw" }}>
+                            <p style={{ textAlign: "left" }}>Trainee must be 10-17 years old. Learn basic techniques.</p>
+                            <ul style={{ textAlign: "left" }}>
+                              <li>8 Lessons</li>
+                              <li>Swim Without Assistance</li>
+                              <li>Athletic Trainings</li>
+                            </ul>
+                            <p style={{ textAlign: "center", marginTop: "0", fontSize: "15px", fontSize: "0.9vw" }}>$170.00</p>
+                            <Button onClick={ () => this.onButtonClick('Teens Program', 1, 170) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 {/* Third Row */}
                 <div className="row justify-content-center" style={{ margin: "1em 0em"}}>
                   <div className="" style={{ border: "1px solid #2B9ED9", margin: "0em 1em", borderRadius: "25px", width: "31%" }}>
                     <div className="row align-items-start" style={{ height: "100%", padding: "0 1em" }}>
                       <div className="col">
-                        <i className="fas fa-swimming-pool" style={{ margin: "3vw 0", fontSize: "9vw" }} />
+                        <i className="fas fa-life-ring" style={{ margin: "3vw 0", fontSize: "9vw" }} />
                         <div style={{ textAlign: "left" }}>
-                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.8vw" }}>Adults Membership</Header>
+                          <Header as="h2" style={{ textAlign: "center", color: "#2B9ED9", fontFamily: "MuseoW01-700", fontSize: "1.7vw" }}>Lifeguard Training</Header>
                           <div style={{ textAlign: "center", fontFamily: "MuseoW01-700", color: "#1A4C66", fontSize: "0.9vw" }}>
-                            <p style={{ textAlign: "left" }}>Keep up with your swimming everyday.</p>
+                            <p style={{ textAlign: "left" }}>Effective trainings and guidances from our professional trainers.</p>
                             <ul style={{ textAlign: "left" }}>
-                              <li>Unlimited Facility Access</li>
-                              <li>Personal Trainer</li>
+                              <li>40 Hours of Training</li>
+                              <li>CPR Course</li>
+                              <li>Swimming & Written Exams</li>
                             </ul>
-                            <p style={{ textAlign: "center", fontSize: "15px", fontSize: "0.9vw" }}>$25.00</p>
-                            <Button onClick={ () => this.onButtonClick('Adults Membership', 1, 25) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
+                            <p style={{ textAlign: "center", fontSize: "15px", fontSize: "0.9vw" }}>$250.00</p>
+                            <Button onClick={ () => this.onButtonClick('Lifeguard Training', 1, 250) } primary style={{ marginBottom: "10px", borderRadius:"25px", width: "12vw", background: "#5CC5FD", color: "#FBFBFB", fontFamily: "MuseoW01-700" }}>SELECT</Button>
                           </div>
                         </div>
                       </div>
