@@ -20,7 +20,7 @@ class DemoCarousel extends Component {
                     src="https://water.arlingtonva.us/wp-content/uploads/sites/4/2016/03/Blue-Buoy-on-swimming-pool-000063897223_Large.jpg"
                   />
                 </Carousel.Item>
-                <Carousel.Item style={{ height: "100vh", filter: "brightness(85%)" }}>
+                {/* <Carousel.Item style={{ height: "100vh", filter: "brightness(85%)" }}>
                   <img
                     className="d-block w-100"
                     src="https://www.stonybrook.edu/commcms/studentaffairs/rec/images/pool-2018.jpg"
@@ -31,7 +31,7 @@ class DemoCarousel extends Component {
                     className="d-block w-100"
                     src="https://previews.123rf.com/images/epicstockmedia/epicstockmedia1507/epicstockmedia150700009/42845648-beautiful-luxury-home-with-swimming-pool-at-sunset.jpg"
                   />
-                </Carousel.Item>                
+                </Carousel.Item>                 */}
               </Carousel>
             </div>
         );
