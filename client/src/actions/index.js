@@ -59,3 +59,7 @@ export const createOrder = (title, quantity, cost, callback) => async dispatch =
   dispatch({ type: CREATE_ORDER, payload: data });
   callback();
 }
+
+export const handleToken = (token, callback) => async dispatch => {
+  callback();
+}

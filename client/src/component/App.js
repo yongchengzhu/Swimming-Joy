@@ -10,6 +10,7 @@ import Signin from './Signin';
 import Signout from './Signout';
 import Checkout from './Checkout';
 import Test from './Test';
+import Success from './Success';
 
 class App extends React.Component {
   render() {
@@ -25,6 +26,7 @@ class App extends React.Component {
           <Route path="/signout" component={Signout} exact />
           <Route path="/test" component={Test} exact />
           <Route path="/checkout" component={Checkout} exact />
+          <Route path="/success" component={Success} exact />
         </div>
       </BrowserRouter>
     );

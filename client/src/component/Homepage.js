@@ -206,7 +206,19 @@ ResponsiveContainer.propTypes = {
 // 
 const Homepage = (props) => (
   <ResponsiveContainer auth={props.auth} fetchUser={props.fetchUser}>
-    <div style={{ padding: "1em 0em", height: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ height: "20vh", display: "flex", flexDirection: "column", background: "#E9ECEF" }}>
+      <div className="container-fluid" style={{ flexGrow: "1", display: "flex" }}>
+        <div className="row align-items-center justify-content-center" style={{ width: "100%", margin: "0" }}>
+          <div className="col" align="center">
+            <p style={{ fontSize: "2em", marginBottom: "0" }}><strong><em>Limited Time Offer!</em></strong></p>
+            <p><em>Pick any program and join today to get a free pair of goggles.</em></p>
+            <Link to="/signup">SIGN UP TODAY ></Link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style={{ padding: "0em 0em", height: "100vh", display: "flex", flexDirection: "column" }}>
       <div className="container-fluid" style={{ /*backgroundColor: "steelblue",*/ flexGrow: "1", display: "flex", background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.swimswam.com/wp-content/uploads/2018/02/stock-by-Mike-Lewis-LDM_1946.jpg') no-repeat center center fixed", backgroundSize: "cover" }}>
         <div className="row align-items-center" style={{ flexGrow: "1" }}>
           <div className="col">

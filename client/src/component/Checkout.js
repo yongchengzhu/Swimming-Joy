@@ -32,17 +32,34 @@ class Checkout extends React.Component {
                 <div className="ui segment">
                   <p style={{ fontFamily: "MuseoW01-700", fontSize: "1em" }}>Your Purchase:</p>
                   <Segment>
-                    <p>Order: {this.props.order.title}</p>
+                    <div className="container" style={{ padding: "0" }}>
+                      <div className="row">
+                        <div className="col-2">
+                          <p style={{ fontFamily: "MuseoW01-700"  }}>Order:</p>
+                          <p style={{ fontFamily: "MuseoW01-700"  }}>Quantity:</p>
+                          <p style={{ fontFamily: "MuseoW01-700"  }}>Cost:</p>
+                        </div>
+                        <div className="col">
+                          <p>{this.props.order.title}</p>
+                          <p>{this.props.order.quantity}</p>
+                          <p>{this.props.order.cost}</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <p>Order: {this.props.order.title}</p>
                     <p>Quantity: {this.props.order.quantity}</p>
-                    <p>Cost: {this.props.order.cost}</p>
+                    <p>Cost: {this.props.order.cost}</p> */}
                   </Segment>
-                </div>
-                <div className="row justify-content-center">
-                  <div className="col-3">
-                    <Payments />
-                    {/* <div className="ui primary button">Check Out</div> */}
+                  <div className="row justify-content-center">
+                    <p style={{ padding: "0 1em" }}><em>*Note: Please do not refresh the current page. Once we've processed your payment, we cannot issue refunds. Please confirm order details before making your purchase!</em></p>
+                    <Payments history={this.props.history} />
                   </div>
                 </div>
+                {/* <div className="row justify-content-center">
+                  <div className="col-3">
+                    <Payments />
+                  </div>
+                </div> */}
                 {/* End column */}
               </div>
               {/* End row */}

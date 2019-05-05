@@ -32,7 +32,7 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        <Segment style={{ margin: "0", backgroundColor: "rgb(26, 76, 102)", border: "none", paddingBottom: "0" }}>
+        <Segment vertical style={{ margin: "0", backgroundColor: "rgb(26, 76, 102)", border: "none", paddingBottom: "0" }}>
           <Heading page="signup" />
         </Segment>
           <Grid className="main" textAlign="center" verticalAlign="middle" style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
