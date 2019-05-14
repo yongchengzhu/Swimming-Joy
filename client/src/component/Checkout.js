@@ -6,6 +6,7 @@ import Heading from './Heading';
 import Title from './Title';
 import Footer from './Footer';
 import Payments from './Payments';
+import requireAuth from './requireAuth';
 import './Signup.css';
 
 class Checkout extends React.Component {
@@ -79,4 +80,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Checkout);
+export default requireAuth(connect(mapStateToProps)(Checkout));
