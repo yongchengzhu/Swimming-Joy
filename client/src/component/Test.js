@@ -10,6 +10,7 @@ class DemoCarousel extends Component {
               <Carousel style={{ height: "100vh", width: "100%" }}>
                 <Carousel.Item style={{ height: "100vh", filter: "brightness(85%)" }}>
                   <img
+                    style={{ height: "100vh" }}
                     className="d-block w-100"
                     src="https://www.thoughtco.com/thmb/ZE93UVJ2eVYbr_v5HUiyo7sRsl4=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/smooth-curve-and-water-jets-of-swimming-pool--641703906-5ade28fa43a1030036997d1a.jpg"
                   />
