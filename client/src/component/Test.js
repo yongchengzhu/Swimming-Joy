@@ -14,8 +14,9 @@ class DemoCarousel extends Component {
                     src="https://www.thoughtco.com/thmb/ZE93UVJ2eVYbr_v5HUiyo7sRsl4=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/smooth-curve-and-water-jets-of-swimming-pool--641703906-5ade28fa43a1030036997d1a.jpg"
                   />
                 </Carousel.Item>
-                <Carousel.Item style={{ height: "100vh", filter: "brightness(85%)" }}>
+                <Carousel.Item style={{ height: "100vh", filter: "brightness(85%)", width: "100%" }}>
                   <img
+                    style={{ height: "100vh" }}
                     className="d-block w-100"
                     src="https://water.arlingtonva.us/wp-content/uploads/sites/4/2016/03/Blue-Buoy-on-swimming-pool-000063897223_Large.jpg"
                   />
