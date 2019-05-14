@@ -6,6 +6,10 @@ import Title from './Title';
 import Footer from './Footer';
 
 class About extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div style={{  }}>

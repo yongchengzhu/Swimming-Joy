@@ -18,6 +18,10 @@ import Checkout from './Checkout';
 import './font.css'
 
 class Programs extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   onButtonClick = (title, price, quantity) => {
     this.props.createOrder(title, price, quantity, () => this.props.history.push('/checkout'));
   }

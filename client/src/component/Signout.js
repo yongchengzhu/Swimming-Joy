@@ -5,6 +5,10 @@ import { signout } from '../actions';
 
 class Signout extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+  componentDidMount() {
     this.props.signout(() => this.props.history.push('/'));
   }
   

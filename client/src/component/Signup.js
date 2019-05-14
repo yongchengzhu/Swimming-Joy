@@ -19,6 +19,10 @@ import { signup } from '../actions';
 import './Signup.css';
 
 class Signup extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   onSubmit = (formProps) => {
     this.props.signup(formProps, () => this.props.history.push('/'));
   }

@@ -42,12 +42,13 @@ const HomepageHeading = ({ mobile }) => (
     <img src="https://i.imgur.com/vb0Zv9V.png" style={{ width: "125px", display: "inline" }}></img>
     <Header
       as="h2"
-      content="Your only opportunity to swim the duck out of your life."
+      content="Excellence is the gradual result of always striving to do better."
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
         fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
+        marginTop: mobile ? "0.5em" : "1.5em",
+        width: "750px"
       }}
     />
     <Button as={Link} to='/programs' primary size="huge">
@@ -147,35 +148,7 @@ class DesktopContainer extends React.Component {
               </Menu>
           </Segment>
           <Test />
-          {/* <Segment
-            inverted
-            textAlign="center"
-            style={{ height: "100vh", backgroundColor: "rgba(0,0,0,0.2)" }}
-            vertical
-          > */}
-            {/* <Menu
-              fixed={fixed ? "top" : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size="large"
-              stackable
-              style={{ border: "none", position: "absolute", left: "0", right: "0" }}
-            >
-              <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as={Link} to="/programs">Programs</Menu.Item>
-                <Menu.Item as={Link} to="/about">About</Menu.Item>
-                <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
-                <Menu.Menu position="right">
-                  {this.renderLinks()}
-                </Menu.Menu>
-              </Container>
-            </Menu> */}
-            <HomepageHeading />
-          {/* </Segment> */}
+          <HomepageHeading />
         </Visibility>
 
         {children}

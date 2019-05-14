@@ -10,6 +10,10 @@ import requireAuth from './requireAuth';
 import './Signup.css';
 
 class Checkout extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div>
