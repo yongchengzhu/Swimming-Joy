@@ -60,7 +60,7 @@ class Signin extends React.Component {
                     />
                   </Form.Field>
                   <Button primary fluid size="large">
-                    Sign Up
+                    Sign In
                   </Button>
                 </Segment>
               </Form>
